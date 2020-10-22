@@ -1,0 +1,81 @@
+# depslib dependency file v1.0
+1603254670 source:c:\users\evasquez\desktop\elmer - privado\utn\laboratorio de computación ii\trabajopracticofinal\lave\main.cpp
+	<iostream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<cstdio>
+	<ctime>
+	<string.h>
+	<windows.h>
+	<stdio.h>
+	"funciones.h"
+	"rlutil.h"
+
+1603396660 c:\users\evasquez\desktop\elmer - privado\utn\laboratorio de computación ii\trabajopracticofinal\lave\funciones.h
+
+1603398302 source:c:\users\evasquez\desktop\elmer - privado\utn\laboratorio de computación ii\trabajopracticofinal\lave\funciones.cpp
+	<iostream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<cstdio>
+	<ctime>
+	<string.h>
+	<windows.h>
+	<stdio.h>
+	"funciones.h"
+	"rlutil.h"
+	"usuario.h"
+
+1600534705 c:\users\evasquez\desktop\elmer - privado\utn\laboratorio de computación ii\trabajopracticofinal\lave\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1600728332 source:c:\users\evasquez\desktop\elmer - privado\utn\laboratorio de computación ii\trabajopracticofinal\lave\ui.cpp
+	<iostream>
+	<cstring>
+	"ui.h"
+	"rlutil.h"
+
+1600728332 c:\users\evasquez\desktop\elmer - privado\utn\laboratorio de computación ii\trabajopracticofinal\lave\ui.h
+
+1603395945 source:c:\users\evasquez\desktop\elmer - privado\utn\laboratorio de computación ii\trabajopracticofinal\lave\fecha.cpp
+	<iostream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<cstdio>
+	<ctime>
+	<string.h>
+	<windows.h>
+	<stdio.h>
+	"fecha.h"
+
+1603395945 c:\users\evasquez\desktop\elmer - privado\utn\laboratorio de computación ii\trabajopracticofinal\lave\fecha.h
+
+1603398146 source:c:\users\evasquez\desktop\elmer - privado\utn\laboratorio de computación ii\trabajopracticofinal\lave\usuario.cpp
+	<iostream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<cstdio>
+	<ctime>
+	<string.h>
+	<windows.h>
+	<stdio.h>
+	"usuario.h"
+
+1603395922 c:\users\evasquez\desktop\elmer - privado\utn\laboratorio de computación ii\trabajopracticofinal\lave\usuario.h
+	"fecha.h"
+
