@@ -11,7 +11,6 @@ class Menu{
     Menu();
     ~Menu();
     setNivel();
-
 };
 
 #endif // MENU_H_INCLUDED
