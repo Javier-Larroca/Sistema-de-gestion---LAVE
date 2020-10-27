@@ -1,0 +1,123 @@
+
+**********************************************************************************************
+Clases:
+
+1. Usuario: 
+//Propiedades	-int ID Autonumerico
+		-char [50]Nombre
+		-char [50]APellido	
+		-int DNI
+		-Fecha fecha de nacimiento
+		-Fecha fecha de ingreso
+		-int Rol: 1/2/3/4(Soporte)
+		-contraseña: char[50]
+		-bool Estado
+//Constructores
+Usuario(){
++ID: int //Automatico 
++SetfechaDeIngreso: Fecha//Automatico o manual
++SetNombre: char //Manual
++SetApellido: char
++SetDNI: int
++SetfechaDeNacimiento: int
++GetId(): int
++GetfechaDeIngreo: Fecha
+escribirDisco(pos:int): bool
+leerDisco(pos:int): bool
+} 
+
+2. Fecha
+   	-Dia int 
+	-Mes int 
+  	-Año int
+	+setDia
+	+SetMes
+	+SetAño
+	+GetDia
+	+GetMes
+	+GetAño
+	
+3. 	Venta
+	IdUsuario: int
+	Fecha: Fecha //Automatica
+	NumeroDeFactura int //Automatico
+	productosVendidos productoVendido p[10]
+´	FormaDePago bool (1:Efectivo|0:Tarjeta)
+	setProductosVendidos(): productoVendido
+	setFormaDePago(): bool 
+	GetProductosVendidos(): productoVendido
+	GetFormaDePago(): bool    
+	escribirDisco(pos:int): bool
+	leerDisco(pos:int): bool
+
+4. CajaFuerte
+	-Saldo: int
+	+setSaldo(int): 	
+	+GetSaldo	
+	+retirarEfectivo(int): void
+	
+5. Fichaje 
+	//Si el cajero se loguea y se desloguea. Automatico
+	//Sino, es modificable por usuario nivel 1 y 2
+	-HorarioDeIngreso: Horario 
+	-HorariosDeSalida: Horario
+	-Fecha: Fecha
+´	-ID Usuario int 
+	+SetHorarioDeIngreso Horario
+	+SetHorarioDeSalida Horario
+	+GetHorarioDeIngreso Horario
+	+GetHorarioDeSalida Horario 
+	+GetFecha() Fecha 
+	+GetIdUsuario int 
+
+6. Horario 
+	-Horas	int
+	-Minutos	int
+	+SetHoras int
+	+SetMinutos int
+	+GetHoras  int
+	+GetMinutos int
+
+7. Producto
+	#Precio float
+	#Descripcion char
+	setPrecio(int)
+	setDescripcion() void
+	getPrecio	
+	getDescripcion		 		
+
+8. ProductoVendido	//Herencia de producto
+	-Cantidad int;
+	+setCantidad: int 
+	+getCantidad: int 
+ 
+CUando se desloguea un cajero nos da un reporte en pantalla de las ventas totales que realizó
+
+class login{
+	private:
+	char usuario
+	char contraseña
+}
+
+
+class Menu{
+	private:
+	Usuario u
+	int nivel (1 a 3) //Menu y submenu
+	int rolDeUsuario
+	public:	
+	menu();
+	setNivel();
+}
+
+class reporte{
+
+
+}
+
+
+
+
+
+
+
