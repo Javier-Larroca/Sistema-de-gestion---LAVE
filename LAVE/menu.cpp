@@ -12,7 +12,8 @@
 
 using namespace std;
 
-Menu::Menu(){
+Menu::Menu()
+{
 Login principal;
 strcpy(usuarioLogueado,principal.getUsuarioIngresado());
 cout<<"\nUsuario ingresado: " << usuarioLogueado;
