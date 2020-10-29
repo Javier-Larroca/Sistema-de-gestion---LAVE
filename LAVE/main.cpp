@@ -9,10 +9,12 @@
 #include <stdio.h>
 #include "rlutil.h"
 #include "login.h"
+#include "menu.h"
 using namespace std;
 
 int main()
 {
-    Login login;
+    Menu menuPrincipal;
+    menuPrincipal.mostrarOpciones();
     return 0;
 }

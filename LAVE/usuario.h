@@ -15,7 +15,7 @@ class Usuario{
         bool estado;
 
     public:
-        Usuario();
+        void cargar();
         void setFechaDeIngreso();
         int setRol(int);
         int getId();

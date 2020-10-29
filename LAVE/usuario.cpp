@@ -10,7 +10,7 @@
 #include "usuario.h"
 using namespace std;
 
-Usuario::Usuario(){
+void Usuario::cargar(){
 cout<<"Nombre: ";
 cin>>nombre;
 cout<<"\nApellido: ";
@@ -31,6 +31,7 @@ void Usuario::setFechaDeIngreso(){
 
 int Usuario::getId(){
 
+return id;
 }
 
 Fecha Usuario::getFechaDeIngreso(){

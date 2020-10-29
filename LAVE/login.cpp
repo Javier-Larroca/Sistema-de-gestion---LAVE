@@ -25,12 +25,11 @@ cin.getline(usuarioIngresado,50);
 gotoxy(35,5);
 cout<<"Contraseña: ";
 formatoContrasenia(contraseniaIngresada);
-cout<<" "<<contraseniaIngresada;
 }
 
-void Login::getUsuarioIngresado(){
+char *Login::getUsuarioIngresado(){
 
-
+return usuarioIngresado;
 }
 void Login::getContraseniaIngresada(){
 

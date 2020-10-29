@@ -10,7 +10,7 @@ class Login{
     public:
     Login();
     void formatoContrasenia(char *password);//Formato con asteriscos
-    void getUsuarioIngresado();
+    char *getUsuarioIngresado();
     void getContraseniaIngresada();
 };
 
