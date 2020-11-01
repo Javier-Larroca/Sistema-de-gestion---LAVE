@@ -46,6 +46,8 @@
 		<Unit filename="ui.h" />
 		<Unit filename="usuario.cpp" />
 		<Unit filename="usuario.h" />
+		<Unit filename="validador.cpp" />
+		<Unit filename="validador.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

@@ -14,7 +14,7 @@ using namespace std;
 
 int main()
 {
-    Menu menuPrincipal;
-    menuPrincipal.mostrarOpciones();
+    Login principal;
+    principal.ingreso();
     return 0;
 }

@@ -17,21 +17,23 @@
 using namespace std;
 
 
-Login::Login()
+void Login::ingreso()
 {
 char *aux;
 gotoxy(40,3);
 cout<<"Usuario: ";
-cin.getline(usuarioIngresado,50);
+Validador::validaIdLogin(usuarioIngresado);
 gotoxy(35,5);
 cout<<"Contraseña: ";
 formatoContrasenia(contraseniaIngresada);
+
 }
 
 char *Login::getUsuarioIngresado(){
 
 return usuarioIngresado;
 }
+
 void Login::getContraseniaIngresada(){
 
 

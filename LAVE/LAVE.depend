@@ -123,7 +123,7 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1603939458 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\usuario.h
+1604013866 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\usuario.h
 	"fecha.h"
 
 1600728332 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\ui.cpp
@@ -134,7 +134,7 @@
 
 1600728332 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\ui.h
 
-1603972398 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\usuario.cpp
+1604013866 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\usuario.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -146,7 +146,7 @@
 	<stdio.h>
 	"usuario.h"
 
-1604010357 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\main.cpp
+1604200106 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\main.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -160,10 +160,11 @@
 	"login.h"
 	"menu.h"
 
-1604010124 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\login.h
+1604200073 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\login.h
 	"usuario.h"
+	"validador.h"
 
-1604010163 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\login.cpp
+1604201681 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\login.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -176,7 +177,7 @@
 	"login.h"
 	"rlutil.h"
 
-1604010423 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\menu.cpp
+1604013866 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\menu.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -189,7 +190,22 @@
 	"menu.h"
 	"rlutil.h"
 
-1604010357 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\menu.h
+1604013866 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\menu.h
 	"usuario.h"
 	"login.h"
+
+1604199255 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\validador.h
+
+1604201547 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\validador.cpp
+	<iostream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<cstdio>
+	<ctime>
+	<string.h>
+	<windows.h>
+	<stdio.h>
+	"validador.h"
+	"rlutil.h"
 
