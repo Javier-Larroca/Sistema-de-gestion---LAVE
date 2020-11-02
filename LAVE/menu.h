@@ -5,15 +5,13 @@
 
 class Menu{
     protected:
-        //Usuario u; Al instanciar un menu, se ejecuta el constructor de Usuario.
         char usuarioLogueado[50];
         int nivel;
         int rolDeUsuario;
     public:
-    Menu();
-    int setNivel();
-    char *setUsuario();
-    void mostrarOpciones();
+    virtual int setNivel()=0;
+    virtual char *setUsuario()=0;
+    virtual void mostrarOpciones()=0;
 };
 
 #endif // MENU_H_INCLUDED

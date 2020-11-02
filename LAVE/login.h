@@ -3,6 +3,8 @@
 #include "usuario.h"
 #include "validador.h"
 
+/**Interfaz para Login.
+*/
 
 class Login{
     private:
@@ -13,7 +15,7 @@ class Login{
     void ingreso();
     void formatoContrasenia(char *password);//Formato con asteriscos
     char *getUsuarioIngresado();
-    void getContraseniaIngresada();
+    char *getContraseniaIngresada();
 };
 
 

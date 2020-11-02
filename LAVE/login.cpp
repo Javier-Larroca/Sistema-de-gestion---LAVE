@@ -26,7 +26,6 @@ Validador::validaIdLogin(usuarioIngresado);
 gotoxy(35,5);
 cout<<"Contraseña: ";
 formatoContrasenia(contraseniaIngresada);
-
 }
 
 char *Login::getUsuarioIngresado(){
@@ -34,9 +33,9 @@ char *Login::getUsuarioIngresado(){
 return usuarioIngresado;
 }
 
-void Login::getContraseniaIngresada(){
+char *Login::getContraseniaIngresada(){
 
-
+return contraseniaIngresada;
 }
 
 void Login::formatoContrasenia(char *password){

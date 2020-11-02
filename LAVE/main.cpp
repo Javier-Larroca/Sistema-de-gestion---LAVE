@@ -9,12 +9,13 @@
 #include <stdio.h>
 #include "rlutil.h"
 #include "login.h"
-#include "menu.h"
+#include "controlador.h"
 using namespace std;
 
 int main()
 {
     Login principal;
     principal.ingreso();
+    Controlador::instancia().existeUsuario(principal.getUsuarioIngresado(), principal.getContraseniaIngresada());
     return 0;
 }
