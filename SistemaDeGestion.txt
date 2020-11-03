@@ -133,4 +133,7 @@ Negocio. controlador
 
 Vista. 
 
+6/11
+Preguntar a Brian, si la clase archivo guarda un objeto. O si en la clase del objeto a guardar puede tener un metodo que se guarde
+
 

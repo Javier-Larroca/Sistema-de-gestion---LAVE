@@ -14,8 +14,13 @@ using namespace std;
 
 int main()
 {
+    int noIngresa=0;
     Login principal;
     principal.ingreso();
-    Controlador::instancia().existeUsuario(principal.getUsuarioIngresado(), principal.getContraseniaIngresada());
+    if(Controlador::instancia().existeUsuario(principal.getUsuarioIngresado(), principal.getContraseniaIngresada(),&noIngresa)){
+        Controlador::instancia().asignarMenu();
+    }else{
+    principal.loginErroneo(noIngresa);
+    }
     return 0;
 }

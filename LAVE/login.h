@@ -16,6 +16,7 @@ class Login{
     void formatoContrasenia(char *password);//Formato con asteriscos
     char *getUsuarioIngresado();
     char *getContraseniaIngresada();
+    void loginErroneo(int tipoDeError);
 };
 
 

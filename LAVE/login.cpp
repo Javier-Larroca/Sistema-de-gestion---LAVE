@@ -58,3 +58,8 @@ int posCursor=47;
     }
     password[pos]=NULL;
 }
+
+void Login::loginErroneo(int tipoDeError){
+    if(tipoDeError==-1)cout<<"\nUsuario invalido\n";
+    else if(tipoDeError==-2)cout<<"\nContrasenia erronea\n";
+}
