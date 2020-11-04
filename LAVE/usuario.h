@@ -15,7 +15,9 @@ class Usuario{
         bool estado;
 
     public:
-        Usuario();
+        Usuario(int i, char *c); //Constructor de usuario para comparar
+        Usuario(int i); //Constructor de usuario administrador
+        void cargar();
         void setFechaDeIngreso();
         int setRol(int);
         int getId();
@@ -23,6 +25,8 @@ class Usuario{
         Fecha getFechaDeIngreso();
         bool escribirDisco(int p);
         bool leerDisco(int p);
+        const char *getContrasenia();
+        int getDni();
 };
 
 #endif // USUARIO_H_INCLUDED

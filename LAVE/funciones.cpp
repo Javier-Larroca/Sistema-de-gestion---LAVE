@@ -159,7 +159,7 @@ bool finDePrograma=false;
 void validaOpcion(int o, bool *f){
     switch(o){
         case 1:
-            {Usuario u;
+            {//Usuario u;
             //u.escribirDisco();
             }
             break;

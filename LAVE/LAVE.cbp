@@ -32,17 +32,27 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="archivo.cpp" />
+		<Unit filename="archivo.h" />
+		<Unit filename="controlador.cpp" />
+		<Unit filename="controlador.h" />
 		<Unit filename="fecha.cpp" />
 		<Unit filename="fecha.h" />
 		<Unit filename="funciones.cpp" />
 		<Unit filename="funciones.h" />
+		<Unit filename="login.cpp" />
+		<Unit filename="login.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="menu.h" />
+		<Unit filename="menuGerente.cpp" />
+		<Unit filename="menuGerente.h" />
 		<Unit filename="rlutil.h" />
 		<Unit filename="ui.cpp" />
 		<Unit filename="ui.h" />
 		<Unit filename="usuario.cpp" />
 		<Unit filename="usuario.h" />
+		<Unit filename="validador.cpp" />
+		<Unit filename="validador.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

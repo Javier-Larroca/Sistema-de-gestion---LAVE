@@ -115,9 +115,25 @@ class reporte{
 
 }
 
+Brian:
+Se puede llamar constructor adentro de otro constructor?
+Clase que se fije que tipo de usuario entro y que tipo de Menu instanciar
+Menu clase abstracta?
+Login Pantalla/
+Capa vista(login), negocio(Pregunta usuario), datos.
+Singleton
+MVC. Modelo vista(Login) controlador. 
+Modelo. 
 
+Entra por vista, se lo da al controlador (Consulta en los modelos) y el dice a la vista el resultado. La vista hace lo que debería. 
 
+Datos - Modelo
 
+Negocio. controlador 
 
+Vista. 
+
+6/11
+Preguntar a Brian, si la clase archivo guarda un objeto. O si en la clase del objeto a guardar puede tener un metodo que se guarde
 
 
