@@ -8,6 +8,7 @@
 #include <windows.h>
 #include <stdio.h>
 #include "controlador.h"
+#include "menuGerente.h"
 
 using namespace std;
 
@@ -34,6 +35,9 @@ bool Controlador::existeUsuario(char *usuario, char *password, int *tipoDeIngres
     return false;
 }
 
-void Controlador::asignarMenu(){
-
+void Controlador::asignarMenu(char *u){
+MenuGerente nuevo(u);
+system("cls");
+nuevo.mostrarOpciones();
+cout<<u;
 }

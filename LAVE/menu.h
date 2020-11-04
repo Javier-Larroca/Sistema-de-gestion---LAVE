@@ -2,12 +2,10 @@
 #define MENU_H_INCLUDED
 #include "usuario.h"
 #include "login.h"
-
+/**
+Clase abstracta Menu. De esta clase heredan todos los diferentes tipos de Menu
+*/
 class Menu{
-    protected:
-        char usuarioLogueado[50];
-        int nivel;
-        int rolDeUsuario;
     public:
     virtual int setNivel()=0;
     virtual char *setUsuario()=0;

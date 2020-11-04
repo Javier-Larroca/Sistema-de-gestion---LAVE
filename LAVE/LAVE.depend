@@ -146,7 +146,7 @@
 	<stdio.h>
 	"usuario.h"
 
-1604376113 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\main.cpp
+1604460126 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\main.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -190,7 +190,7 @@
 	"menu.h"
 	"rlutil.h"
 
-1604371824 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\menu.h
+1604460233 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\menu.h
 	"usuario.h"
 	"login.h"
 
@@ -209,7 +209,7 @@
 	"validador.h"
 	"rlutil.h"
 
-1604382650 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\archivo.cpp
+1604382941 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\archivo.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -225,7 +225,7 @@
 1604381735 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\archivo.h
 	"usuario.h"
 
-1604381773 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\controlador.cpp
+1604460540 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\controlador.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -236,11 +236,12 @@
 	<windows.h>
 	<stdio.h>
 	"controlador.h"
+	"menuGerente.h"
 
-1604381773 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\controlador.h
+1604458510 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\controlador.h
 	"archivo.h"
 
-1604271257 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\menugerente.cpp
+1604460639 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\menugerente.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -250,8 +251,9 @@
 	<string.h>
 	<windows.h>
 	<stdio.h>
+	"rlutil.h"
 	"menuGerente.h"
 
-1604268695 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\menugerente.h
+1604461006 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\menugerente.h
 	"menu.h"
 

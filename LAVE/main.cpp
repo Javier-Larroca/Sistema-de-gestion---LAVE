@@ -18,7 +18,7 @@ int main()
     Login principal;
     principal.ingreso();
     if(Controlador::instancia().existeUsuario(principal.getUsuarioIngresado(), principal.getContraseniaIngresada(),&noIngresa)){
-        Controlador::instancia().asignarMenu();
+        Controlador::instancia().asignarMenu(principal.getUsuarioIngresado());
     }else{
     principal.loginErroneo(noIngresa);
     }
