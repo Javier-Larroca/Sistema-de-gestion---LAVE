@@ -2,6 +2,8 @@
 #define MENU_H_INCLUDED
 #include "usuario.h"
 #include "login.h"
+#include "validador.h"
+
 /**
 Clase abstracta Menu. De esta clase heredan todos los diferentes tipos de Menu
 */
