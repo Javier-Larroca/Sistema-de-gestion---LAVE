@@ -7,31 +7,25 @@
 #include <string.h>
 #include <windows.h>
 #include <stdio.h>
-#include "menuGerente.h"
+#include "menuAsistente.h"
 
 using namespace std;
 
-MenuGerente::MenuGerente(char *u)
+MenuAsistente::MenuAsistente(char *u)
 {
     strcpy(usuarioLogueado,u);
     nivel=1;
 }
 
-void MenuGerente::mostrarOpciones()
+void MenuAsistente::mostrarOpciones()
 {
     bool salirDelMenu=false;
     char opcAux[20]; //Char auxiliar para validar numero
     int opcion; //Numero donde asignamos el valor que nos da opcAux al pasarlo a la función validaNumero de Validador.cpp. Lo pasamos por direccion
     while (!salirDelMenu)
     {
-        cout<<"Usuario: "<<usuarioLogueado;
-        if(strcmp(usuarioLogueado,"Administrador")==0)
-        {
-            cout<<"\nRol: Administrador de sistema\n";
-        }
-        else{
-        cout<<"\nRol: Gerente\n";
-        }
+    cout<<"Usuario: "<<usuarioLogueado;
+    cout<<"\nRol: Asistente\n";
     cout<<"\n1. Movimientos";
     cout<<"\n2. Reportes";
     cout<<"\n3. Administracion";
@@ -58,13 +52,11 @@ void MenuGerente::mostrarOpciones()
     }
 }
 
-int MenuGerente::setNivel(){
+int MenuAsistente::setNivel(){
 return 0;
 }
 
 
-char *MenuGerente::setUsuario(){
+char *MenuAsistente::setUsuario(){
 return usuarioLogueado;
 }
-
-

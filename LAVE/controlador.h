@@ -16,6 +16,7 @@ class Controlador {
     Controlador& operator=(const Controlador&) = delete; //Sobrecarga de operador '=' para Controlador. De esta forma no se puede usar el operador.
     bool existeUsuario(char *usuario,char *password,int *tipoDeIngreso); //Le pasamos el usuario que se ingresa y el bool para saber si el usuario es de soporte.
     void asignarMenu(char *u);
+    void asignarSubmenu(int i);
 };
 
 

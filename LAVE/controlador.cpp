@@ -39,5 +39,10 @@ void Controlador::asignarMenu(char *u){
 MenuGerente nuevo(u);
 system("cls");
 nuevo.mostrarOpciones();
-cout<<u;
+}
+
+//Asigna submenu
+void Controlador::asignarSubmenu(int i){
+
+
 }

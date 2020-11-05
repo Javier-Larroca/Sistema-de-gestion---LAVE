@@ -44,6 +44,10 @@
 		<Unit filename="login.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="menu.h" />
+		<Unit filename="menuAsistente.cpp" />
+		<Unit filename="menuAsistente.h" />
+		<Unit filename="menuCajero.cpp" />
+		<Unit filename="menuCajero.h" />
 		<Unit filename="menuGerente.cpp" />
 		<Unit filename="menuGerente.h" />
 		<Unit filename="rlutil.h" />

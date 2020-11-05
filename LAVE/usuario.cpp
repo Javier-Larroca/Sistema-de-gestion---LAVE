@@ -10,6 +10,10 @@
 #include "usuario.h"
 using namespace std;
 
+Usuario::Usuario(){
+Archivo::cantidadDeObjetos(&id,1);
+}
+
 //Constructor de usuario administrativo. Lo usamos en Archivo::creacionDeArchivoUsuario.
 Usuario::Usuario(int i){
 id=i;
@@ -52,15 +56,15 @@ return id;
 }
 
 Fecha Usuario::getFechaDeIngreso(){
-
+return fechaDeNacimiento;
 }
 
 bool Usuario::escribirDisco(int p){
-
+return true;
 }
 
 bool Usuario::leerDisco(int p){
-
+return true;
 }
 
 const char *Usuario::getContrasenia(){

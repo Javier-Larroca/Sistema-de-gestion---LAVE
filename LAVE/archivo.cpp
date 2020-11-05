@@ -21,6 +21,8 @@ const char *archivoProducto="data/archivos.dat";
 //Definición de usuario administrador
 const char *administrador="admin";
 
+
+
 int Archivo::buscarUsuario(char *usuario,char *password)
 {
     int idUsuario;
@@ -56,7 +58,7 @@ int Archivo::buscarUsuario(char *usuario,char *password)
             fclose(f);
             return -1; //Usuario invalido
         }
-        Usuario normal(idUsuario,password); //Lo mismo, si logramos pasarlo a numeros efectivamente, creamos un usuario de referencia para poder compararlo.
+        Usuario normal; //Lo mismo, si logramos pasarlo a numeros efectivamente, creamos un usuario de referencia para poder compararlo.
         while (fread(&normal, sizeof(Usuario),1,f))
         {
             if ((normal.getDni()==idUsuario) && (!strcmp(normal.getContrasenia(),password)))
@@ -64,12 +66,10 @@ int Archivo::buscarUsuario(char *usuario,char *password)
                 fclose(f);
                 return 1;
             }
-            else
-            {
-                fclose(f);
-                return -2; //Usuario o contraseña erronea. No aclaramos cual de los 2 por seguridad.
-            }
         }
+        fclose(f);
+        return -2; //Usuario o contraseña erronea. No aclaramos cual de los 2 por seguridad.
+
 
     }
 }
@@ -86,4 +86,28 @@ void Archivo::creacionDeArchivoUsuario()
         fclose(p);
     }
     fclose(p);
+}
+
+//Podemos usar esta función para saber cuantos objetos guardamos en cada archivo.
+void Archivo::cantidadDeObjetos(int *i, int tipoDeObjeto)  //Le pasamos el tipo de objeto(Declara en un enum en el .h) y entraria en el switch. Podemos ir agregando mas objetos en el tiempo.
+{
+    FILE *f;
+    switch(tipoDeObjeto)
+    {
+    case 1: //Aca deberiamos usar usuario como tipo de enum Objeto. Ver despues.
+        {
+            f = fopen(archivoUsuario, "rb");
+            if (f == NULL)
+            {
+                cout<<"\nError al acceder al archivo\n";
+            }
+            fseek(f, 0, SEEK_END);
+            *i = ftell(f) / sizeof(Usuario);
+            fclose(f);
+        }
+        break;
+    default:
+        break;
+    }
+
 }

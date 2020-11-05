@@ -9,7 +9,7 @@ class Validador{
 
     public:
     static void validaIngresoDeNombre(char *n);
-    static int validaNumero(char *n);
+    static void validaNumero(char *n, int *i);
     static void validaIdLogin(char *id);
 
 };

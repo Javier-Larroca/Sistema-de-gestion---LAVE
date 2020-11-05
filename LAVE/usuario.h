@@ -1,6 +1,7 @@
 #ifndef USUARIO_H_INCLUDED
 #define USUARIO_H_INCLUDED
 #include "fecha.h"
+#include "archivo.h"
 
 class Usuario{
     private:
@@ -15,6 +16,7 @@ class Usuario{
         bool estado;
 
     public:
+        Usuario();
         Usuario(int i, char *c); //Constructor de usuario para comparar
         Usuario(int i); //Constructor de usuario administrador
         void cargar();

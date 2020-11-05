@@ -134,6 +134,14 @@ Negocio. controlador
 Vista. 
 
 6/11
-Preguntar a Brian, si la clase archivo guarda un objeto. O si en la clase del objeto a guardar puede tener un metodo que se guarde
+Preguntar a Brian, si la clase archivo guarda un objeto. O si en la clase del objeto a guardar puede tener un metodo que se guarde.
+Si inicializo un contructor con parametros, si o si tengo que declarar un constructor sin?
+Es buena practica asignar todos los valores a 0?}
+
+Para agus:
+Armo diferentes menues
+Armo contructos por defecto para usuario
+Armo funcion cantidadDeObjetos en Archivo!!!(Esto es el idautonumerico)
+Como declaro bien el enum!? Investigar
 
 

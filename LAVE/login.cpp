@@ -19,7 +19,6 @@ using namespace std;
 
 void Login::ingreso()
 {
-char *aux;
 gotoxy(40,3);
 cout<<"Usuario: ";
 Validador::validaIdLogin(usuarioIngresado);
@@ -61,5 +60,5 @@ int posCursor=47;
 
 void Login::loginErroneo(int tipoDeError){
     if(tipoDeError==-1)cout<<"\nUsuario invalido\n";
-    else if(tipoDeError==-2)cout<<"\nContrasenia erronea o usuariooooooooooooooooo\n";
+    else if(tipoDeError==-2)cout<<"\nUsuario o contrasenia invalidos\n";
 }

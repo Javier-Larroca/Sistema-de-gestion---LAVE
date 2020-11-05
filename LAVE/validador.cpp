@@ -21,14 +21,9 @@ void Validador::validaIngresoDeNombre(char *n){
 
 }
 
-//Valida que se ingresen numeros
-int Validador:: validaNumero(char *n){
-int opc;
-opc=atoi(n);
-if (opc==0){
-
-
-}
+//Valida que se ingresen numeros. Le pasamos un char y numero por direccion.
+void Validador:: validaNumero(char *n, int *i){
+*i=atoi(n);
 }
 
 void Validador::validaIdLogin(char *id){
