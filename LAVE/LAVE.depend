@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1604602053 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\controlador.cpp
+1604612260 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\controlador.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -11,18 +11,19 @@
 	<stdio.h>
 	"controlador.h"
 	"menuGerente.h"
+	"menuAsistente.h"
+	"menuCajero.h"
 	"submenu.h"
 
-1604602066 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\controlador.h
+1604611830 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\controlador.h
 	"archivo.h"
 	"menu.h"
 
-1604556994 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\archivo.h
+1604611663 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\archivo.h
 	"usuario.h"
 
-1604555624 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\usuario.h
+1604609827 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\usuario.h
 	"fecha.h"
-	"archivo.h"
 
 1604529136 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\fecha.h
 
@@ -84,7 +85,7 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1604529136 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\main.cpp
+1604611812 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\main.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -106,7 +107,7 @@
 
 1600728332 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\ui.h
 
-1604557209 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\usuario.cpp
+1604612143 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\usuario.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -117,6 +118,7 @@
 	<windows.h>
 	<stdio.h>
 	"usuario.h"
+	"archivo.h"
 
 1604549200 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\validador.cpp
 	<iostream>
@@ -131,7 +133,7 @@
 	"validador.h"
 	"rlutil.h"
 
-1604556994 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\archivo.cpp
+1604611625 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\archivo.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -157,7 +159,7 @@
 	"login.h"
 	"rlutil.h"
 
-1604551538 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\menugerente.cpp
+1604607321 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\menugerente.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -199,7 +201,7 @@
 1604552358 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\menucajero.h
 	"menu.h"
 
-1604602053 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\submenu.cpp
+1604610229 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\submenu.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -211,6 +213,6 @@
 	<stdio.h>
 	"submenu.h"
 
-1604601870 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\submenu.h
+1604610229 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\submenu.h
 	"menu.h"
 

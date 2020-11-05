@@ -8,6 +8,7 @@
 #include <windows.h>
 #include <stdio.h>
 #include "usuario.h"
+#include "archivo.h"
 using namespace std;
 
 Usuario::Usuario(){
@@ -31,6 +32,7 @@ dni=i;                          //Si es 0, sabemos que el usuario es administrad
 strcpy(contrasenia,c);
 }
 
+//Faltan validaciones
 void Usuario::cargar(){
 cout<<"Nombre: ";
 cin>>nombre;
@@ -73,4 +75,8 @@ return contrasenia;
 
 int Usuario::getDni(){
 return dni;
+}
+
+int Usuario::getRol(){
+return rol;
 }

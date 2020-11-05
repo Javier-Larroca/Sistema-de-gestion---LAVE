@@ -23,7 +23,7 @@ const char *administrador="admin";
 
 
 
-int Archivo::buscarUsuario(char *usuario,char *password)
+int Archivo::buscarUsuario(char *usuario,char *password, int *rol)
 {
     int idUsuario;
     FILE *f;
@@ -40,6 +40,7 @@ int Archivo::buscarUsuario(char *usuario,char *password)
         {
             if (!strcmp(reg.getContrasenia(),password))
             {
+                *rol=reg.getRol(); //Asigna rol
                 fclose(f);
                 return 1; //Reveer si con otro usuario con misma contraseña falla, creo que no
             }
@@ -63,6 +64,7 @@ int Archivo::buscarUsuario(char *usuario,char *password)
         {
             if ((normal.getDni()==idUsuario) && (!strcmp(normal.getContrasenia(),password)))
             {
+                *rol=normal.getRol(); //Asigna Rol de usuario auxiliar normal.
                 fclose(f);
                 return 1;
             }
@@ -111,3 +113,17 @@ void Archivo::cantidadDeObjetos(int *i, int tipoDeObjeto)  //Le pasamos el tipo 
     }
 
 }
+
+bool Archivo::guardarUsuario(Usuario &u){
+    bool grabo;
+    FILE *f;
+    f = fopen(archivoUsuario, "ab"); //Le paso el const char que almacena la direccion donde lo guardamos.
+    if (f == NULL){
+        return false;
+    }
+    grabo = fwrite(&u, sizeof(Usuario), 1, f);
+    fclose(f);
+    return grabo;
+}
+
+

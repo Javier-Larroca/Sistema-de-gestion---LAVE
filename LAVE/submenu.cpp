@@ -45,7 +45,7 @@ void Submenu::mostrarOpciones()
     system("cls");          //Muestra cierre de sesion
     salirDelSubMenu=true;
     }else {
-
+    Controlador::instancia().evaluarOpcion(3,opcion); //LE pasamos 3 ya que queremos probar el submenu 3, que es administración para el alta de usuarios.
     }
     }
 }

@@ -25,7 +25,7 @@ void MenuGerente::mostrarOpciones()
     while (!salirDelMenu)
     {
         cout<<"Usuario: "<<usuarioLogueado;
-        if(strcmp(usuarioLogueado,"Administrador")==0)
+        if(strcmp(usuarioLogueado,"admin")==0)
         {
             cout<<"\nRol: Administrador de sistema\n";
         }

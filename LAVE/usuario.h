@@ -1,7 +1,7 @@
 #ifndef USUARIO_H_INCLUDED
 #define USUARIO_H_INCLUDED
 #include "fecha.h"
-#include "archivo.h"
+
 
 class Usuario{
     private:
