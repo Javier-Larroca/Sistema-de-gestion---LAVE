@@ -21,7 +21,7 @@ MenuGerente::MenuGerente(char *u)
 void MenuGerente::mostrarOpciones()
 {
     bool salirDelMenu=false;
-    int opcion;
+    char opcion[20];
     while (!salirDelMenu)
     {
         cout<<"Usuario: "<<usuarioLogueado;
@@ -37,8 +37,6 @@ void MenuGerente::mostrarOpciones()
     cout<<"\n3. Administracion\n";
     cout<<"\n4. Salir del sistema\n";
     cout<<endl<<"\nIngrese opcion: ";
-    cin>>opcion;
-    }
 }
 
 int MenuGerente::setNivel(){

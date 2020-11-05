@@ -61,5 +61,9 @@ int posCursor=47;
 
 void Login::loginErroneo(int tipoDeError){
     if(tipoDeError==-1)cout<<"\nUsuario invalido\n";
+<<<<<<< HEAD
     else if(tipoDeError==-2)cout<<"\nUsuario y o contrasenia erronea\n";
+=======
+    else if(tipoDeError==-2)cout<<"\nContrasenia erronea o usuariooooooooooooooooo\n";
+>>>>>>> Elmer
 }
