@@ -143,5 +143,7 @@ Armo diferentes menues
 Armo contructos por defecto para usuario
 Armo funcion cantidadDeObjetos en Archivo!!!(Esto es el idautonumerico)
 Como declaro bien el enum!? Investigar
+Como implementar el NULL cuando termino un char!?
+Porque me toma mal los include en el .h EJ: submenu y menugerente en controlador.h
 
 

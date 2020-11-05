@@ -1,6 +1,7 @@
 #ifndef CONTROLADOR_H_INCLUDED
 #define CONTROLADOR_H_INCLUDED
 #include "archivo.h"
+#include "menu.h"
 
 /**Controlador de la aplicación. Interactua con lo que ve el usuario y con los datos.
 Usa patron de singleton

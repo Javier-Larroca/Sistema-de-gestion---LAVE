@@ -9,8 +9,9 @@
 /**
 Clase abstracta Menu. De esta clase heredan todos los diferentes tipos de Menu
 */
-class Menu{
-    public:
+class Menu
+{
+public:
     virtual int setNivel()=0;
     virtual char *setUsuario()=0;
     virtual void mostrarOpciones()=0;

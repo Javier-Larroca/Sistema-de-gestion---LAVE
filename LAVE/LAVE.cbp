@@ -51,6 +51,8 @@
 		<Unit filename="menuGerente.cpp" />
 		<Unit filename="menuGerente.h" />
 		<Unit filename="rlutil.h" />
+		<Unit filename="submenu.cpp" />
+		<Unit filename="submenu.h" />
 		<Unit filename="ui.cpp" />
 		<Unit filename="ui.h" />
 		<Unit filename="usuario.cpp" />

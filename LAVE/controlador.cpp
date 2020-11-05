@@ -9,6 +9,8 @@
 #include <stdio.h>
 #include "controlador.h"
 #include "menuGerente.h"
+#include "submenu.h"
+
 
 using namespace std;
 
@@ -43,6 +45,6 @@ nuevo.mostrarOpciones();
 
 //Asigna submenu
 void Controlador::asignarSubmenu(int i){
-
-
+Submenu nuevo(3); //Submenu administracion
+nuevo.mostrarOpciones();
 }
