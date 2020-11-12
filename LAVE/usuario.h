@@ -28,6 +28,8 @@ class Usuario{
         bool escribirDisco(int p);
         bool leerDisco(int p);
         const char *getContrasenia();
+        const char *getNombre();
+        const char *getApellido();
         int getDni();
 };
 

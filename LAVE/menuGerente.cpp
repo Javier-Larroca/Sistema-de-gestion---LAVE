@@ -54,7 +54,7 @@ void MenuGerente::mostrarOpciones()
     Sleep(800);
     cout<<".";
     salirDelMenu=true;
-    }else Controlador::instancia().asignarSubmenu(opcion); //Llamamos al controlador y asignamos SubMenu.
+    }else Controlador::instancia().asignarModulo(opcion); //Llamamos al controlador y asignamos SubMenu.
     }
 }
 

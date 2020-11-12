@@ -80,3 +80,10 @@ return dni;
 int Usuario::getRol(){
 return rol;
 }
+
+const char *Usuario::getNombre(){
+return nombre;
+}
+const char *Usuario::getApellido(){
+return apellido;
+}

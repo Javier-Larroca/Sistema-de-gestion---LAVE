@@ -59,6 +59,10 @@
 		<Unit filename="usuario.h" />
 		<Unit filename="validador.cpp" />
 		<Unit filename="validador.h" />
+		<Unit filename="vistaAdministracion.cpp" />
+		<Unit filename="vistaAdministracion.h" />
+		<Unit filename="vistaMovimientos.h" />
+		<Unit filename="vistaReportes.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
