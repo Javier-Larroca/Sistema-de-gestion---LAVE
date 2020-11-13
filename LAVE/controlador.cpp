@@ -76,7 +76,7 @@ void Controlador::nuevoUsuario()
     system("cls");
     cout<<"Alta de usuario: \n"<<endl;
     Usuario nuevo;
-    nuevo.cargar();
+    nuevo.cargar(); //Vista para cargar usuario.
     if(Archivo::guardarUsuario(nuevo))
     {
         cout<<"\nSe guardo con exito al usuario: "<<nuevo.getNombre()<<" "<<nuevo.getApellido()<<endl;
@@ -85,4 +85,20 @@ void Controlador::nuevoUsuario()
         system("pause");
         cout<<"\No se pudo guardar al usuario: "<<nuevo.getNombre()<<" "<<nuevo.getApellido()<<"\nContactese con soporte\n"<<endl;
     }
+}
+void Controlador::bajaDeUsuario(){
+system("cls");
+char idAux[50];
+int id;
+cout<<"Baja de usuario";
+cout<<"\nIngrese el ID de usuario a eliminar: ";
+cin>>idAux;
+Validador::validaNumero(idAux,&id);
+if(id==0){
+cout<<"\nID no valido. Solo se permiten numeros\n";
+system("pause");
+}else {
+cout<<"\nExiste el usuario\n";
+system("pause");
+}
 }

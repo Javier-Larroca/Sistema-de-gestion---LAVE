@@ -22,6 +22,7 @@ class Controlador {
     void ingresoPrincipal();
     void asignarModulo(int i);
     void nuevoUsuario();
+    void bajaDeUsuario();
 };
 
 

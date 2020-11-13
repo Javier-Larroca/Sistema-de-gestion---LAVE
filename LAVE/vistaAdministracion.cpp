@@ -37,7 +37,7 @@ void vistaAdministracion::opciones()
         {
         case 1:Controlador::instancia().nuevoUsuario();
             break;
-        case 2:
+        case 2:Controlador::instancia().bajaDeUsuario();
             break;
         case 3:
             break;

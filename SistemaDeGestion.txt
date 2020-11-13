@@ -142,9 +142,15 @@ Para agus:
 Armo diferentes menues
 Armo contructos por defecto para usuario
 Armo funcion cantidadDeObjetos en Archivo!!!(Esto es el idautonumerico)
+
 Como declaro bien el enum!? Investigar
 Como implementar el NULL cuando termino un char!?
 Porque me toma mal los include en el .h EJ: submenu y menugerente en controlador.h
 Lo mismo con archivo e usuario. Si archivo include"usuario", usuario include "archivo" en .cpp
 
-
+12/11
+Login debería llamar al controlador? o controlador debería llamar al login. y despues en la clase login llamo al controlador. 
+Lo que son vistas me parece que los hago clases estaticas. 
+Usuario es una entidad, no una vista. 
+Vista es el unico que muestra datos al usuario. 
+Preguntar a Brian lo de Login!!
