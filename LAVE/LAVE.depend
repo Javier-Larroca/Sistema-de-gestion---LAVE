@@ -257,7 +257,7 @@
 	"../Vista/menuCajero.h"
 	"../Vista/submenu.h"
 
-1605592300 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\modelo\archivo.cpp
+1605592611 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\modelo\archivo.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -270,15 +270,15 @@
 	<iostream>
 	"archivo.h"
 
-1605592300 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\modelo\archivo.h
+1605592611 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\modelo\archivo.h
 	"usuario.h"
 
-1605589118 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\modelo\usuario.h
+1605592611 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\modelo\usuario.h
 	"fecha.h"
 
-1604529136 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\modelo\fecha.h
+1605592611 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\modelo\fecha.h
 
-1603395945 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\modelo\fecha.cpp
+1605592611 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\modelo\fecha.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -290,7 +290,7 @@
 	<stdio.h>
 	"fecha.h"
 
-1605589118 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\modelo\usuario.cpp
+1605592611 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\modelo\usuario.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -303,7 +303,7 @@
 	"usuario.h"
 	"archivo.h"
 
-1605494702 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\modelo\funciones.cpp
+1605592611 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\modelo\funciones.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -317,9 +317,9 @@
 	"../Vista/rlutil.h"
 	"../Modelo/usuario.h"
 
-1603396660 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\modelo\funciones.h
+1605592611 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\modelo\funciones.h
 
-1600534705 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\vista\rlutil.h
+1605592611 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\vista\rlutil.h
 	<iostream>
 	<string>
 	<cstdio>
@@ -339,9 +339,9 @@
 	"ui.h"
 	"rlutil.h"
 
-1600728332 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\vista\ui.h
+1605592611 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\vista\ui.h
 
-1605588806 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\modelo\validador.cpp
+1605592611 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\modelo\validador.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -354,9 +354,9 @@
 	"validador.h"
 	"../Vista/rlutil.h"
 
-1605587741 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\modelo\validador.h
+1605592611 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\modelo\validador.h
 
-1605499624 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\vista\login.cpp
+1605592611 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\vista\login.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -370,7 +370,7 @@
 	"rlutil.h"
 	"ui.h"
 
-1605495376 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\vista\login.h
+1605592611 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\vista\login.h
 	"../Modelo/usuario.h"
 	"../Modelo/validador.h"
 	"rlutil.h"
