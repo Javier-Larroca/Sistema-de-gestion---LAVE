@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include "login.h"
 #include "rlutil.h"
+#include "ui.h"
 
 #define ENTER 13
 #define BACKSPACE 8
@@ -16,10 +17,11 @@
 
 using namespace std;
 
-
 void Login::ingreso()
 {
-char *aux;
+setlocale(LC_ALL, "Spanish");
+system("color 80");
+SetConsoleTitle("   -  LAVE  -  ");
 gotoxy(40,3);
 cout<<"Usuario: ";
 Validador::validaIdLogin(usuarioIngresado);
@@ -61,9 +63,13 @@ int posCursor=47;
 
 void Login::loginErroneo(int tipoDeError){
     if(tipoDeError==-1)cout<<"\nUsuario invalido\n";
+<<<<<<< HEAD:LAVE/login.cpp
 <<<<<<< HEAD
     else if(tipoDeError==-2)cout<<"\nUsuario y o contrasenia erronea\n";
 =======
     else if(tipoDeError==-2)cout<<"\nContrasenia erronea o usuariooooooooooooooooo\n";
 >>>>>>> Elmer
+=======
+    else if(tipoDeError==-2)cout<<"\nUsuario o contrasenia invalidos\n";
+>>>>>>> Elmer:LAVE/Vista/login.cpp
 }

@@ -7,20 +7,13 @@
 #include <string.h>
 #include <windows.h>
 #include <stdio.h>
-#include "rlutil.h"
-#include "login.h"
-#include "controlador.h"
+#include "Vista/rlutil.h"
+#include "Vista/login.h"
+#include "Controlador/controlador.h"
 using namespace std;
 
 int main()
 {
-    int noIngresa=0;
-    Login principal;
-    principal.ingreso();
-    if(Controlador::instancia().existeUsuario(principal.getUsuarioIngresado(), principal.getContraseniaIngresada(),&noIngresa)){
-        Controlador::instancia().asignarMenu(principal.getUsuarioIngresado());
-    }else{
-    principal.loginErroneo(noIngresa);
-    }
+    Controlador::instancia().ingresoPrincipal();
     return 0;
 }

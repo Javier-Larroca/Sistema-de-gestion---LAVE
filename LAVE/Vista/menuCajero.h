@@ -1,18 +1,23 @@
-#ifndef MENUGERENTE_H_INCLUDED
-#define MENUGERENTE_H_INCLUDED
+#ifndef MENUCAJERO_H_INCLUDED
+#define MENUCAJERO_H_INCLUDED
 #include "menu.h"
 
-class MenuGerente:public Menu
+/**
+Declaracion de clase Menu cajero
+*/
+
+class MenuCajero:public Menu
 {
 protected:
     char usuarioLogueado[50];
     int nivel;
     int rolDeUsuario;
 public:
-    MenuGerente(char *u);
+    MenuCajero(char *u);
     int setNivel();
     char *setUsuario();
     void mostrarOpciones(); //Mostrar opciones para Menu gerente
 };
 
-#endif // MENUGERENTE_H_INCLUDED
+
+#endif // MENUCAJERO_H_INCLUDED

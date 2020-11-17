@@ -21,14 +21,15 @@ const char *archivoProducto="data/archivos.dat";
 //Definición de usuario administrador
 const char *administrador="admin";
 
-int Archivo::buscarUsuario(char *usuario,char *password)
+
+
+int Archivo::buscarUsuario(char *usuario,char *password, int *rol)
 {
     int idUsuario;
     FILE *f;
     f =fopen(archivoUsuario,"rb"); //Abrimos el archivo de usuarios para empezar a buscar
     if (f == NULL)
     {
-        cout<<"\nHubo un error al tratar de acceder a la carpeta 'data'. Reinstalar el programa\n";
         return -3;
     }
     if (!strcmp(administrador,usuario))  //Compara si el usuario ingresado es administrativo. Si es 0 es porque las cadenas son iguales.
@@ -38,6 +39,7 @@ int Archivo::buscarUsuario(char *usuario,char *password)
         {
             if (!strcmp(reg.getContrasenia(),password))
             {
+                *rol=reg.getRol(); //Asigna rol
                 fclose(f);
                 return 1; //Reveer si con otro usuario con misma contraseña falla, creo que no
             }
@@ -56,20 +58,19 @@ int Archivo::buscarUsuario(char *usuario,char *password)
             fclose(f);
             return -1; //Usuario invalido
         }
-        Usuario normal(idUsuario,password); //Lo mismo, si logramos pasarlo a numeros efectivamente, creamos un usuario de referencia para poder compararlo.
+        Usuario normal; //Lo mismo, si logramos pasarlo a numeros efectivamente, creamos un usuario de referencia para poder compararlo.
         while (fread(&normal, sizeof(Usuario),1,f))
         {
             if ((normal.getDni()==idUsuario) && (!strcmp(normal.getContrasenia(),password)))
             {
+                *rol=normal.getRol(); //Asigna Rol de usuario auxiliar normal.
                 fclose(f);
                 return 1;
             }
-            else
-            {
-                fclose(f);
-                return -2; //Usuario o contraseña erronea. No aclaramos cual de los 2 por seguridad.
-            }
         }
+        fclose(f);
+        return -2; //Usuario o contraseña erronea. No aclaramos cual de los 2 por seguridad.
+
 
     }
 }
@@ -87,3 +88,41 @@ void Archivo::creacionDeArchivoUsuario()
     }
     fclose(p);
 }
+
+//Podemos usar esta función para saber cuantos objetos guardamos en cada archivo.
+void Archivo::cantidadDeObjetos(int *i, int tipoDeObjeto)  //Le pasamos el tipo de objeto.
+{
+    FILE *f;
+    switch(tipoDeObjeto)
+    {
+    case 1: //Le pasa usuario
+        {
+            f = fopen(archivoUsuario, "rb");
+            if (f == NULL)
+            {
+                cout<<"\nError al acceder al archivo\n";
+            }
+            fseek(f, 0, SEEK_END);
+            *i = ftell(f) / sizeof(Usuario);
+            fclose(f);
+        }
+        break;
+    default:
+        break;
+    }
+
+}
+
+bool Archivo::guardarUsuario(Usuario &u){
+    bool grabo;
+    FILE *f;
+    f = fopen(archivoUsuario, "ab"); //Le paso el const char que almacena la direccion donde lo guardamos.
+    if (f == NULL){
+        return false;
+    }
+    grabo = fwrite(&u, sizeof(Usuario), 1, f);
+    fclose(f);
+    return grabo;
+}
+
+
