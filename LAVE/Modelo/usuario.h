@@ -17,9 +17,9 @@ class Usuario{
 
     public:
         Usuario();
+        Usuario(char *n, char *a, int d, int r, char *c);
         Usuario(int i, char *c); //Constructor de usuario para comparar
         Usuario(int i); //Constructor de usuario administrador
-        void cargar();
         void setFechaDeIngreso();
         int setRol(int);
         int getId();

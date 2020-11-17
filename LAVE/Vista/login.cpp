@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include "login.h"
 #include "rlutil.h"
+#include "ui.h"
 
 #define ENTER 13
 #define BACKSPACE 8
@@ -16,9 +17,11 @@
 
 using namespace std;
 
-
 void Login::ingreso()
 {
+setlocale(LC_ALL, "Spanish");
+system("color 80");
+SetConsoleTitle("   -  LAVE  -  ");
 gotoxy(40,3);
 cout<<"Usuario: ";
 Validador::validaIdLogin(usuarioIngresado);

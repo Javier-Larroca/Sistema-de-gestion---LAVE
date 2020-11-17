@@ -8,10 +8,10 @@
 #include <windows.h>
 #include <stdio.h>
 #include "controlador.h"
-#include "menuGerente.h"
-#include "menuAsistente.h"
-#include "menuCajero.h"
-#include "submenu.h"
+#include "../Vista/menuGerente.h"
+#include "../Vista/menuAsistente.h"
+#include "../Vista/menuCajero.h"
+#include "../Vista/submenu.h"
 
 
 using namespace std;
@@ -45,7 +45,7 @@ void Controlador::asignarModulo(int i)
 {
     switch(i)
     {
-    case 3:
+    case 3: //Vista administracion
     {
         vistaAdministracion nueva;
         nueva.opciones();
@@ -73,18 +73,13 @@ void Controlador::ingresoPrincipal()
 
 void Controlador::nuevoUsuario()
 {
-    system("cls");
-    cout<<"Alta de usuario: \n"<<endl;
-    Usuario nuevo;
-    nuevo.cargar(); //Vista para cargar usuario.
-    if(Archivo::guardarUsuario(nuevo))
-    {
-        cout<<"\nSe guardo con exito al usuario: "<<nuevo.getNombre()<<" "<<nuevo.getApellido()<<endl;
-        system("pause");
-    }else {
-        system("pause");
-        cout<<"\No se pudo guardar al usuario: "<<nuevo.getNombre()<<" "<<nuevo.getApellido()<<"\nContactese con soporte\n"<<endl;
-    }
+    vistaUsuario nuevaVista;
+    nuevaVista.cargaDeUsuario();
+    Usuario U;
+    U=nuevaVista.getUsuario();
+    if(Archivo::guardarUsuario(U)==0){
+    nuevaVista.msjError(1);
+    }else nuevaVista.msjExito(1);
 }
 void Controlador::bajaDeUsuario(){
 system("cls");

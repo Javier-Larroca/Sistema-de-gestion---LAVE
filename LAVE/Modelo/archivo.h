@@ -8,6 +8,7 @@ usuario=1, //Si recibe numero 1, lo toma como Usuario
 producto=2 //Si recibe numero 2, lo toma como Producto
 };
 */
+
 class Archivo{
     public:
     static int buscarUsuario(char *usuario, char *password, int *rol);

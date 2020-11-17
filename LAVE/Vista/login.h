@@ -1,7 +1,8 @@
 #ifndef LOGIN_H_INCLUDED
 #define LOGIN_H_INCLUDED
-#include "usuario.h"
-#include "validador.h"
+#include "../Modelo/usuario.h"
+#include "../Modelo/validador.h"
+#include "rlutil.h"
 
 /**Interfaz para Login.
 */

@@ -154,3 +154,5 @@ Lo que son vistas me parece que los hago clases estaticas.
 Usuario es una entidad, no una vista. 
 Vista es el unico que muestra datos al usuario. 
 Preguntar a Brian lo de Login!!
+19/11
+En guardarUsuario(Usuario &u), cuando le paso un objeto usuario normal me lo toma, si le paso el de la vista me lo rechaza.

@@ -12,7 +12,15 @@
 using namespace std;
 
 Usuario::Usuario(){
+}
+//Constructor para carga de usuario. Asigna ID automaticamente.
+Usuario::Usuario(char *n, char *a, int d, int r, char *c){
 Archivo::cantidadDeObjetos(&id,1);
+strcpy(nombre, n);
+strcpy(apellido, a);
+dni=d;
+rol=r;
+strcpy(contrasenia, c);
 }
 
 //Constructor de usuario administrativo. Lo usamos en Archivo::creacionDeArchivoUsuario.
@@ -32,20 +40,6 @@ dni=i;                          //Si es 0, sabemos que el usuario es administrad
 strcpy(contrasenia,c);
 }
 
-//Faltan validaciones
-void Usuario::cargar(){
-cout<<"Nombre: ";
-cin>>nombre;
-cout<<"\nApellido: ";
-cin>>apellido;
-cout<<"\nDNI: ";
-cin>>dni;
-cout<<"\nRol: ";
-cin>>rol;
-cout<<"\nEstablezca contraseña: ";
-cin>>contrasenia;
-estado=true;
-}
 
 void Usuario::setFechaDeIngreso(){
 

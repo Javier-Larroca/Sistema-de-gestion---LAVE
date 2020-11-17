@@ -30,7 +30,6 @@ int Archivo::buscarUsuario(char *usuario,char *password, int *rol)
     f =fopen(archivoUsuario,"rb"); //Abrimos el archivo de usuarios para empezar a buscar
     if (f == NULL)
     {
-        cout<<"\nHubo un error al tratar de acceder a la carpeta 'data'. Reinstalar el programa\n";
         return -3;
     }
     if (!strcmp(administrador,usuario))  //Compara si el usuario ingresado es administrativo. Si es 0 es porque las cadenas son iguales.
@@ -91,12 +90,12 @@ void Archivo::creacionDeArchivoUsuario()
 }
 
 //Podemos usar esta función para saber cuantos objetos guardamos en cada archivo.
-void Archivo::cantidadDeObjetos(int *i, int tipoDeObjeto)  //Le pasamos el tipo de objeto(Declara en un enum en el .h) y entraria en el switch. Podemos ir agregando mas objetos en el tiempo.
+void Archivo::cantidadDeObjetos(int *i, int tipoDeObjeto)  //Le pasamos el tipo de objeto.
 {
     FILE *f;
     switch(tipoDeObjeto)
     {
-    case 1: //Aca deberiamos usar usuario como tipo de enum Objeto. Ver despues.
+    case 1: //Le pasa usuario
         {
             f = fopen(archivoUsuario, "rb");
             if (f == NULL)

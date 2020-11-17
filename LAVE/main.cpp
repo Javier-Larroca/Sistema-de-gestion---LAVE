@@ -7,9 +7,9 @@
 #include <string.h>
 #include <windows.h>
 #include <stdio.h>
-#include "rlutil.h"
-#include "login.h"
-#include "controlador.h"
+#include "Vista/rlutil.h"
+#include "Vista/login.h"
+#include "Controlador/controlador.h"
 using namespace std;
 
 int main()
