@@ -85,13 +85,10 @@ int Archivo::buscarUsuario(Usuario &aux, int dni){
         resultado=-3; //No puede abrir el archivo, retorna -3
     }
 while (fread(&aux,sizeof(Usuario),1,f)){
-    cout<<aux.getDni()<<endl;
-    cout<<aux.getId()<<endl;
-    cout<<dni<<endl;
     if(dni==aux.getDni() && aux.getEstado()==false){
-    resultado=-4; //Lo encuentra pero ya estaba dado de baja. Retorna negativo -4
+    return -4; //Lo encuentra pero ya estaba dado de baja. Retorna negativo -4
     }else if(dni==aux.getDni()){
-    resultado=1; //Si se escapa del primer If, vuelve a preguntarse si coincide.
+    return 1; //Si se escapa del primer If, vuelve a preguntarse si coincide.
     }
 }
 
@@ -105,7 +102,7 @@ void Archivo::creacionDeArchivoUsuario()
     FILE *p= fopen(archivoUsuario,"rb"); //Abre en modo lectura el archivo.
     if (p == NULL)  //Si no lo puede abrir, es la primera vez que se ingresa al archivo, entonces creamos por default el usuario admin.
     {
-        Usuario admin(1); //Le pasamos un solo parametro, llamando al constructor de usuario admin.
+        Usuario admin(0); //Le pasamos un solo parametro, llamando al constructor de usuario admin.
         p= fopen(archivoUsuario, "ab"); //Generamos el archivo
         if (p == NULL){cout<<"\nHubo un error al acceder a datos del programa\n",exit(1);}
         fwrite(&admin,sizeof(Usuario),1,p); //Guardamos a admin
@@ -128,7 +125,7 @@ void Archivo::cantidadDeObjetos(int *i, int tipoDeObjeto)  //Le pasamos el tipo 
                 cout<<"\nError al acceder al archivo\n";
             }
             fseek(f, 0, SEEK_END);
-            *i = (ftell(f) / sizeof(Usuario))+1;
+            *i = ftell(f) / sizeof(Usuario);
             fclose(f);
         }
         break;
@@ -159,6 +156,19 @@ if (f == NULL){
 return false;
 }
 u.setEstado(false);
+fseek (f,idInterno*sizeof(Usuario), SEEK_SET);
+grabo = fwrite(&u, sizeof(Usuario),1,f);
+fclose(f);
+return grabo;
+}
+
+bool Archivo::modificaRol(Usuario u, int idInterno){
+bool grabo;
+FILE *f;
+f = fopen(archivoUsuario, "rb+");
+if (f == NULL){
+return false;
+}
 fseek (f,idInterno*sizeof(Usuario), SEEK_SET);
 grabo = fwrite(&u, sizeof(Usuario),1,f);
 fclose(f);

@@ -107,19 +107,19 @@ void vistaUsuario::msjExito(int i)
     break;
     case 2: //Si es 2, da de baja correctamente al usuario.
     {
-        cout<<"\nSe dio de baja correctamente al usuario: "<<auxiliar.getNombre()<<auxiliar.getApellido();
+        cout<<"\nSe dio de baja correctamente al usuario\n";
         system("pause");
     }
     break;
     case 3: //Si es 3, modifica correctamente el rol del usuario.
     {
-        cout<<"\nSe modifico correctamente el rol al usuario: "<<auxiliar.getNombre()<<auxiliar.getApellido();
+        cout<<"\nSe modifico correctamente el rol al usuario\n";
         system("pause");
     }
     break;
     case 4: //Si es 4, modifica correctamente el horario de fichaje.
     {
-        cout<<"\nSe modifico correctamente el horario de fichaje del usuario: "<<auxiliar.getNombre()<<auxiliar.getApellido();
+        cout<<"\nSe modifico correctamente el horario de fichaje del usuario\n";
         system("pause");
     }
     break;
@@ -221,4 +221,40 @@ void vistaUsuario::encabezado(int i)
         break;
     }
 
+}
+
+bool vistaUsuario::modificacionDeRol(Usuario &u){
+int rolNuevo;
+cout<<"\nUsuario: ";
+cout<<u.getNombre()<<" "<<u.getApellido();
+cout<<"\nRol actual: ";
+if(u.getRol()==1)cout<<"Gerente";
+else if(u.getRol()==2)cout<<"Asistente";
+else cout<<"Cajero";
+cout<<"\nRol nuevo: ";
+cin>>aux;
+rolNuevo=Validador::validaRol(aux);
+while(rolNuevo==-1){
+cout<<"\nRol ingresado no valido. Ingrese descripcion del puesto o 1(Gerente) | 2(Asistente) | 3(Cajero)\n";
+cout<<"Rol: ";
+cin>>aux;
+rolNuevo=Validador::validaRol(aux);
+}
+u.setRol(rolNuevo);
+cout<<"Rol nuevo: ";
+cout<<aux;
+cout<<"\n¿Guardar cambios?";
+cout<<"\nSi/No: ";
+cin>>aux;
+while(!Validador::validaSioNo(aux)){
+cout<<"\nIngrese 'Si' o 'No' para poder continuar: ";
+cin>>aux;
+}
+if (strcmp("Si",aux)==0 || strcmp("SI",aux)==0){
+return true;
+}else {
+cout<<"\nSe cancela modificacion de rol...\n";
+system("pause");
+}
+return false;
 }

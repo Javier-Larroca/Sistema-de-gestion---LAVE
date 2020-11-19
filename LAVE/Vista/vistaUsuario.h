@@ -13,7 +13,7 @@ public:
     void cargaDeUsuario();
     int ingresoID();
     bool bajaDeUsuario(Usuario u);
-    bool modificacionDeRol(Usuario);
+    bool modificacionDeRol(Usuario &u);
     bool modificacionHorarioFichaje(Usuario);
     void msjExito(int i);
     void msjError(int i);

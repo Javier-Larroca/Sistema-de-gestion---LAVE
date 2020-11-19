@@ -90,12 +90,32 @@ void Controlador::bajaDeUsuario(){
     int busqueda=Archivo::buscarUsuario(reg,nuevo.ingresoID());
     if(busqueda==1)
     {
-        cout<<reg.getId();
         if(nuevo.bajaDeUsuario(reg))
         {
         if(Archivo::bajaLogica(reg, reg.getId())){
         nuevo.msjExito(2);
         }else nuevo.msjError(2);
+        }
+    }
+    else
+        nuevo.msjError(busqueda);
+}
+
+void Controlador::modificacionUsuario()
+{
+    vistaUsuario nuevo;
+    nuevo.encabezado(3);
+    Usuario reg;
+    int busqueda=Archivo::buscarUsuario(reg,nuevo.ingresoID());
+    cout<<reg.getId()<<endl;
+    if (busqueda==1)
+    {
+        if (nuevo.modificacionDeRol(reg))
+        {
+        cout<<reg.getId()<<endl;
+        cout<<reg.getRol()<<endl;
+        if (Archivo::modificaRol(reg, reg.getId()))nuevo.msjExito(3);
+        else nuevo.msjError(3);
         }
     }
     else

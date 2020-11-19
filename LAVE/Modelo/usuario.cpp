@@ -96,3 +96,7 @@ void Usuario::setEstado(bool cambio){
 estado=cambio;
 }
 
+void Usuario::setRol(int r){
+rol=r;
+}
+
