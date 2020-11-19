@@ -13,6 +13,7 @@ class Validador{
     static void validaIdLogin(char *id);
     static bool validaEspacios(char *n);
     static int validaRol(char *n);
+    static bool validaSioNo(char *n);
 
 };
 

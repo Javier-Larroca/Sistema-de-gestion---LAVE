@@ -60,6 +60,8 @@
 		<Unit filename="Vista/ui.h" />
 		<Unit filename="Vista/vistaAdministracion.cpp" />
 		<Unit filename="Vista/vistaAdministracion.h" />
+		<Unit filename="Vista/vistaInicioPrincipal.cpp" />
+		<Unit filename="Vista/vistaInicioPrincipal.h" />
 		<Unit filename="Vista/vistaMovimientos.h" />
 		<Unit filename="Vista/vistaReportes.h" />
 		<Unit filename="Vista/vistaUsuario.cpp" />

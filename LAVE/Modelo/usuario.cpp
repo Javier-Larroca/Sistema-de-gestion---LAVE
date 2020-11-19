@@ -21,6 +21,7 @@ strcpy(apellido, a);
 dni=d;
 rol=r;
 strcpy(contrasenia, c);
+estado=true;
 }
 
 //Constructor de usuario administrativo. Lo usamos en Archivo::creacionDeArchivoUsuario.
@@ -81,3 +82,13 @@ return nombre;
 const char *Usuario::getApellido(){
 return apellido;
 }
+
+//Modificación de ID(DNI) para un usuario
+void Usuario::setId(int d){
+dni=d;
+}
+
+bool Usuario::getEstado(){
+return estado;
+}
+

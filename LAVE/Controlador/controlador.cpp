@@ -82,18 +82,24 @@ void Controlador::nuevoUsuario()
     }else nuevaVista.msjExito(1);
 }
 void Controlador::bajaDeUsuario(){
-system("cls");
-char idAux[50];
-int id;
-cout<<"Baja de usuario";
-cout<<"\nIngrese el ID de usuario a eliminar: ";
-cin>>idAux;
-Validador::validaNumero(idAux,&id);
-if(id==0){
-cout<<"\nID no valido. Solo se permiten numeros\n";
-system("pause");
-}else {
-cout<<"\nExiste el usuario\n";
-system("pause");
+    vistaUsuario nuevo;
+    nuevo.encabezado(2);
+    Usuario reg;
+    int busqueda=Archivo::buscarUsuario(reg,nuevo.ingresoID());
+    if(busqueda==1)
+    {
+        cout<<reg.getId();
+        if(nuevo.bajaDeUsuario(reg))
+        {
+
+
+        }
+    }
+    else
+        nuevo.msjError(busqueda);
 }
+
+void Controlador::inicioDeAplicacion(){
+VistaInicioPrincipal inicio;
+inicio.mostrar();
 }

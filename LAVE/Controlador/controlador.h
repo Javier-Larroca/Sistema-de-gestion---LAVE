@@ -5,6 +5,7 @@
 #include "../Vista/login.h"
 #include "../Vista/vistaAdministracion.h"
 #include "../Vista/vistaUsuario.h"
+#include "../Vista/vistaInicioPrincipal.h"
 
 /**Controlador de la aplicación. Interactua con lo que ve el usuario y con los datos.
 Usa patron de singleton
@@ -24,6 +25,7 @@ class Controlador {
     void asignarModulo(int i);
     void nuevoUsuario();
     void bajaDeUsuario();
+    void inicioDeAplicacion();
 };
 
 

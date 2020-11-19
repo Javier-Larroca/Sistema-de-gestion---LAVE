@@ -22,7 +22,7 @@ const char *archivoProducto="data/archivos.dat";
 const char *administrador="admin";
 
 
-
+//Busca usuario logueado. Recibe contraseña
 int Archivo::buscarUsuario(char *usuario,char *password, int *rol)
 {
     int idUsuario;
@@ -74,6 +74,29 @@ int Archivo::buscarUsuario(char *usuario,char *password, int *rol)
 
     }
 }
+
+//Busca usuario para baja logica, modificacion de rol u horario fichaje
+int Archivo::buscarUsuario(Usuario &aux, int dni){
+    int resultado;
+    FILE *f;
+    f =fopen(archivoUsuario,"rb"); //Abrimos el archivo de usuarios para empezar a buscar
+    if (f == NULL)
+    {
+        resultado=-3; //No puede abrir el archivo, retorna -3
+    }
+while (fread(&aux,sizeof(Usuario),1,f)){
+    if(dni==aux.getDni() && aux.getEstado()==false){
+    resultado=-4; //Lo encuentra pero ya estaba dado de baja. Retorna negativo -4
+    }else if(dni==aux.getDni()){
+    resultado=1; //Si se escapa del primer If, vuelve a preguntarse si coincide.
+    }
+    else resultado=0; //Si no encuentra a nadie, retorna 0
+}
+
+fclose(f);
+return resultado;
+}
+
 //Si es la primera vez que se ingresa al sistema, creamos el archivo usuario con un solo usuario, el administrador.
 void Archivo::creacionDeArchivoUsuario()
 {
@@ -124,5 +147,6 @@ bool Archivo::guardarUsuario(Usuario &u){
     fclose(f);
     return grabo;
 }
+
 
 

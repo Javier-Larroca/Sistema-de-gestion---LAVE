@@ -38,10 +38,12 @@ int posCursor=49;
             }
         }
         else{
-            gotoxy(posCursor,3);
+            gotoxy(posCursor,20);
             cout<<id[pos];
+            if(posCursor<=56){
             posCursor++;
             pos++;
+            }
         }
     }
     id[pos]=NULL;
@@ -75,4 +77,11 @@ default:
     return -1;
 }
 }
+}
+
+bool Validador::validaSioNo(char *n){
+if (strcmp("SI",n)==0 || strcmp("Si",n)==0 || strcmp("No",n)==0 || strcmp("NO",n)==0){
+return true;
+}
+else return false;
 }

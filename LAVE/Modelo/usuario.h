@@ -22,8 +22,10 @@ class Usuario{
         Usuario(int i); //Constructor de usuario administrador
         void setFechaDeIngreso();
         int setRol(int);
+        void setId(int d);
         int getId();
         int getRol();
+        bool getEstado();
         Fecha getFechaDeIngreso();
         bool escribirDisco(int p);
         bool leerDisco(int p);

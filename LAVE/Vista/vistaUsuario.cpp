@@ -17,13 +17,11 @@ using namespace std;
 void vistaUsuario::cargaDeUsuario(){
 char nombreAux[50];
 char apellidoAux[50];
-char aux[20]; //Cadena auxiliar para validar numeros en DNI.
 int dni;
 int rol;
 char contraAux[50];
 system("cls");
-gotoxy(40,1);
-cout<<" ALTA DE USUARIO ";
+encabezado(1); //Encabezado. Mostramos Alta de usuario. Al ser una vista con una carga de datos directa, va a adentro del metodo.
 cout<<"\nNombre: ";
 cin>>nombreAux;
 //Empieza validacion de espacios en el nombre
@@ -74,24 +72,151 @@ Usuario a(nombreAux, apellidoAux, dni, rol, contraAux);
 auxiliar=a;
 }
 
+bool vistaUsuario::bajaDeUsuario(Usuario u){
+cout<<"\nEsta seguro que desea dar de baja al usuario: ";
+cout<<u.getNombre()<<" "<<u.getApellido();
+cout<<"\nSi/No: ";
+cin>>aux;
+while(!Validador::validaSioNo(aux)){
+cout<<"\nIngrese 'Si' o 'No' para poder continuar: ";
+cin>>aux;
+}
+if (strcmp("Si",aux)==0 || strcmp("SI",aux)==0){
+return true;
+}else {
+cout<<"\nSe cancela baja de usuario...\n";
+system("pause");
+}
+return false;
+}
+
 Usuario vistaUsuario::getUsuario(){
 return auxiliar;
 }
 
 //Mensaje de exitos. Cada int que reciba va a estar asociado a un módulo.
-void vistaUsuario::msjExito(int i){
-//Si es 1, quiere decir que recibe mensaje de exito del controlador al guardarse el Usuario en disco.
-if (i==1){
-cout<<"\nSe guardo correctamente el usuario: "<<auxiliar.getNombre()<<auxiliar.getApellido();
-system("pause");
+void vistaUsuario::msjExito(int i)
+{
+    switch(i)
+    {
+    case 1: //Si es 1, quiere decir que recibe mensaje de exito del controlador al guardarse el Usuario en disco.
+    {
+        cout<<"\nSe guardo correctamente el usuario: "<<auxiliar.getNombre()<<auxiliar.getApellido()<<endl;
+        system("pause");
+    }
+    break;
+    case 2: //Si es 2, da de baja correctamente al usuario.
+    {
+        cout<<"\nSe dio de baja correctamente al usuario: "<<auxiliar.getNombre()<<auxiliar.getApellido();
+        system("pause");
+    }
+    break;
+    case 3: //Si es 3, modifica correctamente el rol del usuario.
+    {
+        cout<<"\nSe modifico correctamente el rol al usuario: "<<auxiliar.getNombre()<<auxiliar.getApellido();
+        system("pause");
+    }
+    break;
+    case 4: //Si es 4, modifica correctamente el horario de fichaje.
+    {
+        cout<<"\nSe modifico correctamente el horario de fichaje del usuario: "<<auxiliar.getNombre()<<auxiliar.getApellido();
+        system("pause");
+    }
+    break;
+    default:
+    {
+        cout<<"\nError de asignacion de modulo para mensaje";
+        system("pause");
+    }
+    break;
+    }
 }
+void vistaUsuario::msjError(int i)
+{
+    switch(i)
+    {
+    case 1: //Si es 1, error al querer guardar en disco
+    {
+        cout<<"\nHubo un error al intentar guardar al usuario: "<<auxiliar.getNombre()<<auxiliar.getApellido();
+        cout<<"\nComunicarse con soporte tecnico o reinstale la aplicacion";
+    }
+    break;
+    case 2: //Si es 2, error de baja de usuario.
+    {
+        cout<<"\nHubo un error al intentar dar de baja al usuario: "<<auxiliar.getNombre()<<auxiliar.getApellido();
+        cout<<"\nComunicarse con soporte tecnico o reinstale la aplicacion";
+    }
+    break;
+    case 3: //Si es 3, error al querer modificar el usuario
+    {
+        cout<<"\nHubo un error al intentar modificar el rol del usuario: "<<auxiliar.getNombre()<<auxiliar.getApellido();
+        cout<<"\nComunicarse con soporte tecnico o reinstale la aplicacion";
+    }
+    break;
+    case 4: //Si es 4,error al querer modificar el horario de fichaje
+    {
+        cout<<"\nHubo un error al intentar modificar el horario de fichaje del usuario: "<<auxiliar.getNombre()<<auxiliar.getApellido();
+        cout<<"\nComunicarse con soporte tecnico o reinstale la aplicacion";
+    }
+    break;
+    //Numeros negativos o 0 nos indican que hubo Archivo.cpp retorno un error de apertura al controlador.
+    case 0:
+        {
+        cout<<"\nNo se encontro al usuario\n";
+        }
+    case -3:{
+     cout<<"\nNo se pudo abrir el archivo de Usuarios. Contacte mesa de ayuda.\n";
+    }
+        break;
+    case -4:{
+    cout<<"\nEl usuario ya se encontraba dado de baja\n";
+    }
+    break;
+    default:
+    {
+        cout<<"\nError de asignacion de modulo para mensaje";
+    }
+    }
+    system("pause");
 }
 
-void vistaUsuario::msjError(int i){
-if(i==1){
-cout<<"\nHubo un error al intentar guardar al usuario: "<<auxiliar.getNombre()<<auxiliar.getApellido();
-cout<<"\nComunicarse con soporte tecnico o reinstale la aplicacion";
-system("pause");
+//Interfaz grafica para ingreso de ID. Lo implementamos en cualquier metodo donde necesitemos buscar por usuario.
+int vistaUsuario::ingresoID(){
+int id;
+cout<<"\nIngrese ID de usuario: ";
+cin>>aux;
+Validador::validaNumero(aux, &id); //Validacion de ID.
+while(strlen(aux)!=8 || id ==0){ //Entra a menos que se hayan ingresado char o que el dni no tenga 8 digitos.
+cout<<"\nID Invalido. Ingrese nuevamente: ";
+cin>>aux;
+Validador::validaNumero(aux, &id);
 }
+return id;
+//auxiliar.setId(id);
+}
+
+//Encabezado para diferentes modulos para un Usuario.
+void vistaUsuario::encabezado(int i)
+{
+    system("cls");
+    gotoxy(40,1);
+    switch (i)
+    {
+    case 1:
+        cout<<" ALTA DE USUARIO"<<endl;
+        break;
+    case 2:
+        cout<<" BAJA DE USUARIO"<<endl;
+        break;
+    case 3:
+        cout<<" MODIFICACION DE ROL"<<endl;
+        break;
+    case 4:
+        cout<<" MODIFICACION DE HORARIO FICHAJE"<<endl;
+            break;
+    default:
+        cout<<"Error de asignación de menú";
+        break;
+    }
 
 }
