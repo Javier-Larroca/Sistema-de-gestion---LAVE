@@ -23,6 +23,7 @@ class Usuario{
         void setFechaDeIngreso();
         int setRol(int);
         void setId(int d);
+        void setEstado(bool cambio);
         int getId();
         int getRol();
         bool getEstado();

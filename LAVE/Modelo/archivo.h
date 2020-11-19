@@ -16,7 +16,7 @@ class Archivo{
     static void creacionDeArchivoUsuario();
     static void cantidadDeObjetos(int *i, int tipoDeObjeto); //Objeto es un ENUM declarado arriba. No lo implementamos todavía.
     static bool guardarUsuario(Usuario &u);
-    static bool bajaLogica(Usuario u);
+    static bool bajaLogica(Usuario u, int  idInterno);
 };
 
 #endif // ARCHIVO_H_INCLUDED

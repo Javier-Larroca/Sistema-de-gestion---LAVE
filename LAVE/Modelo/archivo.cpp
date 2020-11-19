@@ -77,7 +77,7 @@ int Archivo::buscarUsuario(char *usuario,char *password, int *rol)
 
 //Busca usuario para baja logica, modificacion de rol u horario fichaje
 int Archivo::buscarUsuario(Usuario &aux, int dni){
-    int resultado;
+    int resultado=0;
     FILE *f;
     f =fopen(archivoUsuario,"rb"); //Abrimos el archivo de usuarios para empezar a buscar
     if (f == NULL)
@@ -85,12 +85,14 @@ int Archivo::buscarUsuario(Usuario &aux, int dni){
         resultado=-3; //No puede abrir el archivo, retorna -3
     }
 while (fread(&aux,sizeof(Usuario),1,f)){
+    cout<<aux.getDni()<<endl;
+    cout<<aux.getId()<<endl;
+    cout<<dni<<endl;
     if(dni==aux.getDni() && aux.getEstado()==false){
     resultado=-4; //Lo encuentra pero ya estaba dado de baja. Retorna negativo -4
     }else if(dni==aux.getDni()){
     resultado=1; //Si se escapa del primer If, vuelve a preguntarse si coincide.
     }
-    else resultado=0; //Si no encuentra a nadie, retorna 0
 }
 
 fclose(f);
@@ -103,7 +105,7 @@ void Archivo::creacionDeArchivoUsuario()
     FILE *p= fopen(archivoUsuario,"rb"); //Abre en modo lectura el archivo.
     if (p == NULL)  //Si no lo puede abrir, es la primera vez que se ingresa al archivo, entonces creamos por default el usuario admin.
     {
-        Usuario admin(0); //Le pasamos un solo parametro, llamando al constructor de usuario admin.
+        Usuario admin(1); //Le pasamos un solo parametro, llamando al constructor de usuario admin.
         p= fopen(archivoUsuario, "ab"); //Generamos el archivo
         if (p == NULL){cout<<"\nHubo un error al acceder a datos del programa\n",exit(1);}
         fwrite(&admin,sizeof(Usuario),1,p); //Guardamos a admin
@@ -126,7 +128,7 @@ void Archivo::cantidadDeObjetos(int *i, int tipoDeObjeto)  //Le pasamos el tipo 
                 cout<<"\nError al acceder al archivo\n";
             }
             fseek(f, 0, SEEK_END);
-            *i = ftell(f) / sizeof(Usuario);
+            *i = (ftell(f) / sizeof(Usuario))+1;
             fclose(f);
         }
         break;
@@ -148,5 +150,18 @@ bool Archivo::guardarUsuario(Usuario &u){
     return grabo;
 }
 
-
+//Baja lógica usando el ID autonumerico que tenemos
+bool Archivo::bajaLogica(Usuario u, int idInterno){
+bool grabo;
+FILE *f;
+f = fopen(archivoUsuario, "rb+");
+if (f == NULL){
+return false;
+}
+u.setEstado(false);
+fseek (f,idInterno*sizeof(Usuario), SEEK_SET);
+grabo = fwrite(&u, sizeof(Usuario),1,f);
+fclose(f);
+return grabo;
+}
 

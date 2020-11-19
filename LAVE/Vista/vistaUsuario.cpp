@@ -101,7 +101,7 @@ void vistaUsuario::msjExito(int i)
     {
     case 1: //Si es 1, quiere decir que recibe mensaje de exito del controlador al guardarse el Usuario en disco.
     {
-        cout<<"\nSe guardo correctamente el usuario: "<<auxiliar.getNombre()<<auxiliar.getApellido()<<endl;
+        cout<<"\nSe guardo correctamente el usuario: "<<auxiliar.getNombre()<<" "<<auxiliar.getApellido()<<endl;
         system("pause");
     }
     break;
@@ -164,6 +164,8 @@ void vistaUsuario::msjError(int i)
         {
         cout<<"\nNo se encontro al usuario\n";
         }
+        break;
+
     case -3:{
      cout<<"\nNo se pudo abrir el archivo de Usuarios. Contacte mesa de ayuda.\n";
     }

@@ -92,3 +92,7 @@ bool Usuario::getEstado(){
 return estado;
 }
 
+void Usuario::setEstado(bool cambio){
+estado=cambio;
+}
+

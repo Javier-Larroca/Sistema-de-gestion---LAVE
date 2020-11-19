@@ -81,6 +81,8 @@ void Controlador::nuevoUsuario()
     nuevaVista.msjError(1);
     }else nuevaVista.msjExito(1);
 }
+
+//Baja logica de usuario.
 void Controlador::bajaDeUsuario(){
     vistaUsuario nuevo;
     nuevo.encabezado(2);
@@ -91,8 +93,9 @@ void Controlador::bajaDeUsuario(){
         cout<<reg.getId();
         if(nuevo.bajaDeUsuario(reg))
         {
-
-
+        if(Archivo::bajaLogica(reg, reg.getId())){
+        nuevo.msjExito(2);
+        }else nuevo.msjError(2);
         }
     }
     else
