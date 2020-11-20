@@ -107,13 +107,10 @@ void Controlador::modificacionUsuario()
     nuevo.encabezado(3);
     Usuario reg;
     int busqueda=Archivo::buscarUsuario(reg,nuevo.ingresoID());
-    cout<<reg.getId()<<endl;
     if (busqueda==1)
     {
         if (nuevo.modificacionDeRol(reg))
         {
-        cout<<reg.getId()<<endl;
-        cout<<reg.getRol()<<endl;
         if (Archivo::modificaRol(reg, reg.getId()))nuevo.msjExito(3);
         else nuevo.msjError(3);
         }
