@@ -8,7 +8,20 @@
 #include <windows.h>
 #include <stdio.h>
 #include "usuario.h"
+#include "archivo.h"
 using namespace std;
+
+Usuario::Usuario(){
+}
+//Constructor para carga de usuario. Asigna ID automaticamente.
+Usuario::Usuario(char *n, char *a, int d, int r, char *c){
+Archivo::cantidadDeObjetos(&id,1);
+strcpy(nombre, n);
+strcpy(apellido, a);
+dni=d;
+rol=r;
+strcpy(contrasenia, c);
+}
 
 //Constructor de usuario administrativo. Lo usamos en Archivo::creacionDeArchivoUsuario.
 Usuario::Usuario(int i){
@@ -27,19 +40,6 @@ dni=i;                          //Si es 0, sabemos que el usuario es administrad
 strcpy(contrasenia,c);
 }
 
-void Usuario::cargar(){
-cout<<"Nombre: ";
-cin>>nombre;
-cout<<"\nApellido: ";
-cin>>apellido;
-cout<<"\nDNI: ";
-cin>>dni;
-cout<<"\nRol: ";
-cin>>rol;
-cout<<"\nEstablezca contraseña: ";
-cin>>contrasenia;
-estado=true;
-}
 
 void Usuario::setFechaDeIngreso(){
 
@@ -52,15 +52,15 @@ return id;
 }
 
 Fecha Usuario::getFechaDeIngreso(){
-
+return fechaDeNacimiento;
 }
 
 bool Usuario::escribirDisco(int p){
-
+return true;
 }
 
 bool Usuario::leerDisco(int p){
-
+return true;
 }
 
 const char *Usuario::getContrasenia(){
@@ -70,3 +70,15 @@ return contrasenia;
 int Usuario::getDni(){
 return dni;
 }
+
+int Usuario::getRol(){
+return rol;
+}
+
+const char *Usuario::getNombre(){
+return nombre;
+}
+const char *Usuario::getApellido(){
+return apellido;
+}
+

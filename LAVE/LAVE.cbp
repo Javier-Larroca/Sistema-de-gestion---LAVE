@@ -32,31 +32,43 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="archivo.cpp" />
-		<Unit filename="archivo.h" />
-		<Unit filename="controlador.cpp" />
-		<Unit filename="controlador.h" />
-		<Unit filename="fecha.cpp" />
-		<Unit filename="fecha.h" />
-		<Unit filename="funciones.cpp" />
-		<Unit filename="funciones.h" />
-		<Unit filename="login.cpp" />
-		<Unit filename="login.h" />
+		<Unit filename="Controlador/controlador.cpp" />
+		<Unit filename="Controlador/controlador.h" />
+		<Unit filename="Modelo/archivo.cpp" />
+		<Unit filename="Modelo/archivo.h" />
+		<Unit filename="Modelo/fecha.cpp" />
+		<Unit filename="Modelo/fecha.h" />
+		<Unit filename="Modelo/funciones.cpp" />
+		<Unit filename="Modelo/funciones.h" />
+		<Unit filename="Modelo/producto.cpp" />
+		<Unit filename="Modelo/producto.h" />
+		<Unit filename="Modelo/usuario.cpp" />
+		<Unit filename="Modelo/usuario.h" />
+		<Unit filename="Modelo/validador.cpp" />
+		<Unit filename="Modelo/validador.h" />
+		<Unit filename="Vista/login.cpp" />
+		<Unit filename="Vista/login.h" />
+		<Unit filename="Vista/menu.h" />
+		<Unit filename="Vista/menuAsistente.cpp" />
+		<Unit filename="Vista/menuAsistente.h" />
+		<Unit filename="Vista/menuCajero.cpp" />
+		<Unit filename="Vista/menuCajero.h" />
+		<Unit filename="Vista/menuGerente.cpp" />
+		<Unit filename="Vista/menuGerente.h" />
+		<Unit filename="Vista/rlutil.h" />
+		<Unit filename="Vista/submenu.cpp" />
+		<Unit filename="Vista/submenu.h" />
+		<Unit filename="Vista/ui.cpp" />
+		<Unit filename="Vista/ui.h" />
+		<Unit filename="Vista/vistaAdministracion.cpp" />
+		<Unit filename="Vista/vistaAdministracion.h" />
+		<Unit filename="Vista/vistaMovimientos.h" />
+		<Unit filename="Vista/vistaProducto.cpp" />
+		<Unit filename="Vista/vistaProducto.h" />
+		<Unit filename="Vista/vistaReportes.h" />
+		<Unit filename="Vista/vistaUsuario.cpp" />
+		<Unit filename="Vista/vistaUsuario.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="menu.h" />
-		<Unit filename="menuGerente.cpp" />
-		<Unit filename="menuGerente.h" />
-		<Unit filename="rlutil.h" />
-		<Unit filename="ui.cpp" />
-		<Unit filename="ui.h" />
-		<Unit filename="usuario.cpp" />
-		<Unit filename="usuario.h" />
-		<Unit filename="validador.cpp" />
-		<Unit filename="validador.h" />
-		<Extensions>
-			<code_completion />
-			<envvars />
-			<debugger />
-		</Extensions>
+		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

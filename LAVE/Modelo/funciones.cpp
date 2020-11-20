@@ -8,8 +8,8 @@
 #include <windows.h>
 #include <stdio.h>
 #include "funciones.h"
-#include "rlutil.h"
-#include "usuario.h"
+#include "../Vista/rlutil.h"
+#include "../Modelo/usuario.h"
 
 #define ENTER 13
 #define BACKSPACE 8

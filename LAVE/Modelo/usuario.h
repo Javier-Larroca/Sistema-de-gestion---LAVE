@@ -2,6 +2,7 @@
 #define USUARIO_H_INCLUDED
 #include "fecha.h"
 
+
 class Usuario{
     private:
         int id;
@@ -15,9 +16,10 @@ class Usuario{
         bool estado;
 
     public:
+        Usuario();
+        Usuario(char *n, char *a, int d, int r, char *c);
         Usuario(int i, char *c); //Constructor de usuario para comparar
         Usuario(int i); //Constructor de usuario administrador
-        void cargar();
         void setFechaDeIngreso();
         int setRol(int);
         int getId();
@@ -26,6 +28,8 @@ class Usuario{
         bool escribirDisco(int p);
         bool leerDisco(int p);
         const char *getContrasenia();
+        const char *getNombre();
+        const char *getApellido();
         int getDni();
 };
 
