@@ -13,7 +13,10 @@
 #include "../Vista/menuCajero.h"
 #include "../Vista/submenu.h"
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> Agus
 using namespace std;
 
 Controlador::Controlador(){
@@ -22,7 +25,10 @@ Controlador::Controlador(){
 Controlador& Controlador::instancia(){
     static Controlador sInstancia;
     return sInstancia;
+<<<<<<< HEAD
 
+=======
+>>>>>>> Agus
 }
 
 void Controlador::asignarMenu(char *u, int r){
@@ -97,3 +103,17 @@ cout<<"\nExiste el usuario\n";
 system("pause");
 }
 }
+<<<<<<< HEAD
+=======
+
+void Controlador::nuevoProducto()
+{
+    vistaProducto nuevaVista;
+    nuevaVista.cargaDeProducto();
+    Producto P;
+    P=nuevaVista.getProducto();
+    if(Archivo::guardarProducto(P)==0){
+        nuevaVista.msjError(1);
+    }else nuevaVista.msjExito(1);
+}
+>>>>>>> Agus

@@ -43,7 +43,11 @@ void vistaAdministracion::opciones()
             break;
         case 4:
             break;
+<<<<<<< HEAD
         case 5:
+=======
+        case 5:Controlador::instancia().nuevoProducto();
+>>>>>>> Agus
             break;
         case 6:
             break;

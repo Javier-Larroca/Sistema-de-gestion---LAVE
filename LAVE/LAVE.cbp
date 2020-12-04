@@ -40,6 +40,11 @@
 		<Unit filename="Modelo/fecha.h" />
 		<Unit filename="Modelo/funciones.cpp" />
 		<Unit filename="Modelo/funciones.h" />
+<<<<<<< HEAD
+=======
+		<Unit filename="Modelo/producto.cpp" />
+		<Unit filename="Modelo/producto.h" />
+>>>>>>> Agus
 		<Unit filename="Modelo/usuario.cpp" />
 		<Unit filename="Modelo/usuario.h" />
 		<Unit filename="Modelo/validador.cpp" />
@@ -61,14 +66,23 @@
 		<Unit filename="Vista/vistaAdministracion.cpp" />
 		<Unit filename="Vista/vistaAdministracion.h" />
 		<Unit filename="Vista/vistaMovimientos.h" />
+<<<<<<< HEAD
+=======
+		<Unit filename="Vista/vistaProducto.cpp" />
+		<Unit filename="Vista/vistaProducto.h" />
+>>>>>>> Agus
 		<Unit filename="Vista/vistaReportes.h" />
 		<Unit filename="Vista/vistaUsuario.cpp" />
 		<Unit filename="Vista/vistaUsuario.h" />
 		<Unit filename="main.cpp" />
+<<<<<<< HEAD
 		<Extensions>
 			<code_completion />
 			<envvars />
 			<debugger />
 		</Extensions>
+=======
+		<Extensions />
+>>>>>>> Agus
 	</Project>
 </CodeBlocks_project_file>
