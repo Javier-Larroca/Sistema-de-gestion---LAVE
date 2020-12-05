@@ -40,6 +40,8 @@
 		<Unit filename="Modelo/fecha.h" />
 		<Unit filename="Modelo/funciones.cpp" />
 		<Unit filename="Modelo/funciones.h" />
+		<Unit filename="Modelo/producto.cpp" />
+		<Unit filename="Modelo/producto.h" />
 		<Unit filename="Modelo/usuario.cpp" />
 		<Unit filename="Modelo/usuario.h" />
 		<Unit filename="Modelo/validador.cpp" />
@@ -63,6 +65,8 @@
 		<Unit filename="Vista/vistaInicioPrincipal.cpp" />
 		<Unit filename="Vista/vistaInicioPrincipal.h" />
 		<Unit filename="Vista/vistaMovimientos.h" />
+		<Unit filename="Vista/vistaProducto.cpp" />
+		<Unit filename="Vista/vistaProducto.h" />
 		<Unit filename="Vista/vistaReportes.h" />
 		<Unit filename="Vista/vistaUsuario.cpp" />
 		<Unit filename="Vista/vistaUsuario.h" />

@@ -12,7 +12,7 @@
 #include "../Vista/menuAsistente.h"
 #include "../Vista/menuCajero.h"
 #include "../Vista/submenu.h"
-
+#include "../Vista/vistaProducto.h"
 
 using namespace std;
 
@@ -125,5 +125,11 @@ inicio.mostrar();
 }
 
 void Controlador::nuevoProducto(){
-
+vistaProducto nuevaVista;
+    nuevaVista.cargaDeProducto();
+    Producto P;
+    P=nuevaVista.getProducto();
+    if(Archivo::guardarProducto(P)==0){
+        nuevaVista.msjError(1);
+    }else nuevaVista.msjExito(1);
 }

@@ -1,11 +1,13 @@
 #ifndef CONTROLADOR_H_INCLUDED
 #define CONTROLADOR_H_INCLUDED
 #include "../Modelo/archivo.h"
+#include "../Modelo/producto.h"
 #include "../Vista/menu.h"
 #include "../Vista/login.h"
 #include "../Vista/vistaAdministracion.h"
 #include "../Vista/vistaUsuario.h"
 #include "../Vista/vistaInicioPrincipal.h"
+
 
 /**Controlador de la aplicación. Interactua con lo que ve el usuario y con los datos.
 Usa patron de singleton
