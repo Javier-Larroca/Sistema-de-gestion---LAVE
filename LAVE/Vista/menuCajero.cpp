@@ -47,6 +47,7 @@ void MenuCajero::mostrarOpciones()
     Sleep(800);
     cout<<".";
     salirDelMenu=true;
+    system("cls");
     }else Controlador::instancia().asignarModulo(opcion); //Llamamos al controlador y asignamos SubMenu.
     }
 }

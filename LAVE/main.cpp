@@ -10,10 +10,11 @@
 #include "Vista/rlutil.h"
 #include "Vista/login.h"
 #include "Controlador/controlador.h"
+#include "Vista/vistaInicioPrincipal.h"
 using namespace std;
 
 int main()
 {
-    Controlador::instancia().ingresoPrincipal();
+    Controlador::instancia().inicioDeAplicacion();
     return 0;
 }

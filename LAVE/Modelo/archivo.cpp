@@ -22,7 +22,7 @@ const char *archivoProducto="data/archivos.dat";
 const char *administrador="admin";
 
 
-
+//Busca usuario logueado. Recibe contraseña
 int Archivo::buscarUsuario(char *usuario,char *password, int *rol)
 {
     int idUsuario;
@@ -74,6 +74,28 @@ int Archivo::buscarUsuario(char *usuario,char *password, int *rol)
 
     }
 }
+
+//Busca usuario para baja logica, modificacion de rol u horario fichaje
+int Archivo::buscarUsuario(Usuario &aux, int dni){
+    int resultado=0;
+    FILE *f;
+    f =fopen(archivoUsuario,"rb"); //Abrimos el archivo de usuarios para empezar a buscar
+    if (f == NULL)
+    {
+        resultado=-3; //No puede abrir el archivo, retorna -3
+    }
+while (fread(&aux,sizeof(Usuario),1,f)){
+    if(dni==aux.getDni() && aux.getEstado()==false){
+    return -4; //Lo encuentra pero ya estaba dado de baja. Retorna negativo -4
+    }else if(dni==aux.getDni()){
+    return 1; //Si se escapa del primer If, vuelve a preguntarse si coincide.
+    }
+}
+
+fclose(f);
+return resultado;
+}
+
 //Si es la primera vez que se ingresa al sistema, creamos el archivo usuario con un solo usuario, el administrador.
 void Archivo::creacionDeArchivoUsuario()
 {
@@ -123,6 +145,34 @@ bool Archivo::guardarUsuario(Usuario &u){
     grabo = fwrite(&u, sizeof(Usuario), 1, f);
     fclose(f);
     return grabo;
+}
+
+//Baja lógica usando el ID autonumerico que tenemos
+bool Archivo::bajaLogica(Usuario u, int idInterno){
+bool grabo;
+FILE *f;
+f = fopen(archivoUsuario, "rb+");
+if (f == NULL){
+return false;
+}
+u.setEstado(false);
+fseek (f,idInterno*sizeof(Usuario), SEEK_SET);
+grabo = fwrite(&u, sizeof(Usuario),1,f);
+fclose(f);
+return grabo;
+}
+
+bool Archivo::modificaRol(Usuario u, int idInterno){
+bool grabo;
+FILE *f;
+f = fopen(archivoUsuario, "rb+");
+if (f == NULL){
+return false;
+}
+fseek (f,idInterno*sizeof(Usuario), SEEK_SET);
+grabo = fwrite(&u, sizeof(Usuario),1,f);
+fclose(f);
+return grabo;
 }
 
 bool Archivo::guardarProducto(Producto &u){

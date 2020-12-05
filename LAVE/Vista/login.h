@@ -18,6 +18,7 @@ class Login{
     char *getUsuarioIngresado();
     char *getContraseniaIngresada();
     void loginErroneo(int tipoDeError);
+    void interfazIngreso(short iniX, short iniY, short ancho, short alto);
 };
 
 

@@ -12,11 +12,8 @@
 #include "../Vista/menuAsistente.h"
 #include "../Vista/menuCajero.h"
 #include "../Vista/submenu.h"
+#include "../Vista/vistaProducto.h"
 
-<<<<<<< HEAD
-
-=======
->>>>>>> Agus
 using namespace std;
 
 Controlador::Controlador(){
@@ -25,10 +22,7 @@ Controlador::Controlador(){
 Controlador& Controlador::instancia(){
     static Controlador sInstancia;
     return sInstancia;
-<<<<<<< HEAD
 
-=======
->>>>>>> Agus
 }
 
 void Controlador::asignarMenu(char *u, int r){
@@ -87,28 +81,51 @@ void Controlador::nuevoUsuario()
     nuevaVista.msjError(1);
     }else nuevaVista.msjExito(1);
 }
-void Controlador::bajaDeUsuario(){
-system("cls");
-char idAux[50];
-int id;
-cout<<"Baja de usuario";
-cout<<"\nIngrese el ID de usuario a eliminar: ";
-cin>>idAux;
-Validador::validaNumero(idAux,&id);
-if(id==0){
-cout<<"\nID no valido. Solo se permiten numeros\n";
-system("pause");
-}else {
-cout<<"\nExiste el usuario\n";
-system("pause");
-}
-}
-<<<<<<< HEAD
-=======
 
-void Controlador::nuevoProducto()
+//Baja logica de usuario.
+void Controlador::bajaDeUsuario(){
+    vistaUsuario nuevo;
+    nuevo.encabezado(2);
+    Usuario reg;
+    int busqueda=Archivo::buscarUsuario(reg,nuevo.ingresoID());
+    if(busqueda==1)
+    {
+        if(nuevo.bajaDeUsuario(reg))
+        {
+        if(Archivo::bajaLogica(reg, reg.getId())){
+        nuevo.msjExito(2);
+        }else nuevo.msjError(2);
+        }
+    }
+    else
+        nuevo.msjError(busqueda);
+}
+
+void Controlador::modificacionUsuario()
 {
-    vistaProducto nuevaVista;
+    vistaUsuario nuevo;
+    nuevo.encabezado(3);
+    Usuario reg;
+    int busqueda=Archivo::buscarUsuario(reg,nuevo.ingresoID());
+    if (busqueda==1)
+    {
+        if (nuevo.modificacionDeRol(reg))
+        {
+        if (Archivo::modificaRol(reg, reg.getId()))nuevo.msjExito(3);
+        else nuevo.msjError(3);
+        }
+    }
+    else
+        nuevo.msjError(busqueda);
+}
+
+void Controlador::inicioDeAplicacion(){
+VistaInicioPrincipal inicio;
+inicio.mostrar();
+}
+
+void Controlador::nuevoProducto(){
+vistaProducto nuevaVista;
     nuevaVista.cargaDeProducto();
     Producto P;
     P=nuevaVista.getProducto();
@@ -116,4 +133,3 @@ void Controlador::nuevoProducto()
         nuevaVista.msjError(1);
     }else nuevaVista.msjExito(1);
 }
->>>>>>> Agus

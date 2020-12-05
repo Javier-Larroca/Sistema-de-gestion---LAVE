@@ -39,15 +39,11 @@ void vistaAdministracion::opciones()
             break;
         case 2:Controlador::instancia().bajaDeUsuario();
             break;
-        case 3:
+        case 3:Controlador::instancia().modificacionUsuario();
             break;
         case 4:
             break;
-<<<<<<< HEAD
-        case 5:
-=======
         case 5:Controlador::instancia().nuevoProducto();
->>>>>>> Agus
             break;
         case 6:
             break;
@@ -55,22 +51,11 @@ void vistaAdministracion::opciones()
             break;
         case 8:
             break;
-        case 9:
+        case 9:salirDelSubMenu=true;
+                system("cls");
             break;
 
         }
-
-
-    /**if(opcion==0 || opcion>9){  //Si ingresa letras o una opcion mayor a 4. Muestra mensaje de opcion invalida
-    cout<<"\nOpcion invalida\n";
-    system("pause");
-    system("cls");
-    }else if (opcion==9){ // Si es 4, sale del sistema
-    system("cls");          //Muestra cierre de sesion
-    salirDelSubMenu=true;
-    }else {
-    Controlador::instancia().evaluarOpcion(3,opcion); //LE pasamos 3 ya que queremos probar el submenu 3, que es administración para el alta de usuarios.
-    }**/
     }
 }
 

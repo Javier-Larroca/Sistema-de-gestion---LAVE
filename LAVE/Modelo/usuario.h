@@ -21,9 +21,12 @@ class Usuario{
         Usuario(int i, char *c); //Constructor de usuario para comparar
         Usuario(int i); //Constructor de usuario administrador
         void setFechaDeIngreso();
-        int setRol(int);
+        void setRol(int r);
+        void setId(int d);
+        void setEstado(bool cambio);
         int getId();
         int getRol();
+        bool getEstado();
         Fecha getFechaDeIngreso();
         bool escribirDisco(int p);
         bool leerDisco(int p);
