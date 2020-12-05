@@ -27,6 +27,7 @@ class Controlador {
     void bajaDeUsuario();
     void inicioDeAplicacion();
     void modificacionUsuario();
+    void nuevoProducto();
 };
 
 

@@ -87,7 +87,7 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1605764437 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\main.cpp
+1607208330 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\main.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -235,7 +235,7 @@
 	"validador.h"
 	"Controlador/controlador.h"
 
-1605799320 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\controlador\controlador.h
+1607209125 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\controlador\controlador.h
 	"../Modelo/archivo.h"
 	"../Vista/menu.h"
 	"../Vista/login.h"
@@ -243,7 +243,7 @@
 	"../Vista/vistaUsuario.h"
 	"../Vista/vistaInicioPrincipal.h"
 
-1605811260 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\controlador\controlador.cpp
+1607208330 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\controlador\controlador.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -259,7 +259,7 @@
 	"../Vista/menuCajero.h"
 	"../Vista/submenu.h"
 
-1605811260 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\modelo\archivo.cpp
+1607208989 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\modelo\archivo.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -272,10 +272,11 @@
 	<iostream>
 	"archivo.h"
 
-1605804874 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\modelo\archivo.h
+1607209025 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\modelo\archivo.h
 	"usuario.h"
+	"producto.h"
 
-1605800803 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\modelo\usuario.h
+1607208330 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\modelo\usuario.h
 	"fecha.h"
 
 1605593563 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\modelo\fecha.h
@@ -292,7 +293,7 @@
 	<stdio.h>
 	"fecha.h"
 
-1605810429 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\modelo\usuario.cpp
+1607208330 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\modelo\usuario.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -343,7 +344,7 @@
 
 1605593563 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\vista\ui.h
 
-1605772589 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\modelo\validador.cpp
+1607208330 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\modelo\validador.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -356,9 +357,9 @@
 	"validador.h"
 	"../Vista/rlutil.h"
 
-1605764026 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\modelo\validador.h
+1607208330 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\modelo\validador.h
 
-1605764908 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\vista\login.cpp
+1607208330 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\vista\login.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -372,7 +373,7 @@
 	"rlutil.h"
 	"ui.h"
 
-1605755758 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\vista\login.h
+1607208330 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\vista\login.h
 	"../Modelo/usuario.h"
 	"../Modelo/validador.h"
 	"rlutil.h"
@@ -388,7 +389,7 @@
 	"../Modelo/validador.h"
 	"../Controlador/controlador.h"
 
-1605766814 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\vista\menuasistente.cpp
+1607208330 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\vista\menuasistente.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -403,7 +404,7 @@
 1605593563 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\vista\menuasistente.h
 	"menu.h"
 
-1605766814 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\vista\menucajero.cpp
+1607208330 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\vista\menucajero.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -418,7 +419,7 @@
 1605593563 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\vista\menucajero.h
 	"menu.h"
 
-1605766779 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\vista\menugerente.cpp
+1607208330 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\vista\menugerente.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -448,7 +449,7 @@
 1605593563 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\vista\submenu.h
 	"menu.h"
 
-1605801262 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\vista\vistaadministracion.cpp
+1607208330 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\vista\vistaadministracion.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -460,12 +461,12 @@
 	<stdio.h>
 	"vistaAdministracion.h"
 
-1605800777 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\vista\vistausuario.h
+1607208330 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\vista\vistausuario.h
 	"../Modelo/usuario.h"
 	"../Modelo/validador.h"
 	"../Controlador/controlador.h"
 
-1605801615 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\vista\vistausuario.cpp
+1607208330 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\vista\vistausuario.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -479,7 +480,7 @@
 	"rlutil.h"
 	"ui.h"
 
-1605764813 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\vista\vistainicioprincipal.cpp
+1607208330 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\vista\vistainicioprincipal.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -493,6 +494,38 @@
 	"ui.h"
 	"vistaInicioPrincipal.h"
 
-1605748711 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\vista\vistainicioprincipal.h
+1607208330 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\vista\vistainicioprincipal.h
 	"../Controlador/controlador.h"
+
+1607207871 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\modelo\producto.cpp
+	<iostream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<cstdio>
+	<ctime>
+	<string.h>
+	<windows.h>
+	<stdio.h>
+	"producto.h"
+	"archivo.h"
+
+1607207871 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\modelo\producto.h
+
+1607207871 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\vista\vistaproducto.cpp
+	<iostream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<cstdio>
+	<ctime>
+	<string.h>
+	<windows.h>
+	<stdio.h>
+	"vistaProducto.h"
+	"rlutil.h"
+	"ui.h"
+
+1607207871 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\vista\vistaproducto.h
+	"../Modelo/producto.h"
 

@@ -1,6 +1,7 @@
 #ifndef ARCHIVO_H_INCLUDED
 #define ARCHIVO_H_INCLUDED
 #include "usuario.h"
+#include "producto.h"
 
 /* A IMPLEMENTAR MAS ADELANTE.
 enum Objeto{
@@ -18,6 +19,7 @@ class Archivo{
     static bool guardarUsuario(Usuario &u);
     static bool bajaLogica(Usuario u, int  idInterno);
     static bool modificaRol(Usuario u, int idInterno);
+    static bool guardarProducto(Producto &u);
 };
 
 #endif // ARCHIVO_H_INCLUDED

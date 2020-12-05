@@ -175,3 +175,15 @@ fclose(f);
 return grabo;
 }
 
+bool Archivo::guardarProducto(Producto &u){
+    bool grabo;
+    FILE *f;
+    f = fopen(archivoProducto, "ab"); //Le paso el const char que almacena la direccion donde lo guardamos.
+    if (f == NULL){
+        return false;
+    }
+    grabo = fwrite(&u, sizeof(Producto), 1, f);
+    fclose(f);
+    return grabo;
+}
+

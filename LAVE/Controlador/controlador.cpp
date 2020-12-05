@@ -123,3 +123,7 @@ void Controlador::inicioDeAplicacion(){
 VistaInicioPrincipal inicio;
 inicio.mostrar();
 }
+
+void Controlador::nuevoProducto(){
+
+}
