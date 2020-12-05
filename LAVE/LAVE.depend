@@ -244,7 +244,7 @@
 	"../Vista/vistaUsuario.h"
 	"../Vista/vistaInicioPrincipal.h"
 
-1607209337 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\controlador\controlador.cpp
+1607209461 source:c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\controlador\controlador.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
