@@ -16,10 +16,5 @@ using namespace std;
 int main()
 {
     Controlador::instancia().inicioDeAplicacion();
-<<<<<<< HEAD
     return 0;
-=======
-    return 0;
-    //Comentario de prueba - Rama Agus
->>>>>>> main
 }
