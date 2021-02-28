@@ -9,6 +9,7 @@ class Fecha{
         int anio;
     public:
     Fecha();
+    //Fecha(int i);
 };
 
 

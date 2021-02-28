@@ -564,7 +564,7 @@
 1613601779 c:\users\javie\desktop\sistema de gestion - lave\sistema-de-gestion\lave\modelo\usuario.h
 	"fecha.h"
 
-1613601779 c:\users\javie\desktop\sistema de gestion - lave\sistema-de-gestion\lave\modelo\fecha.h
+1614555347 c:\users\javie\desktop\sistema de gestion - lave\sistema-de-gestion\lave\modelo\fecha.h
 
 1613601779 c:\users\javie\desktop\sistema de gestion - lave\sistema-de-gestion\lave\modelo\producto.h
 
@@ -623,7 +623,7 @@
 1613601779 c:\users\javie\desktop\sistema de gestion - lave\sistema-de-gestion\lave\vista\vistaproducto.h
 	"../Modelo/producto.h"
 
-1613601779 source:c:\users\javie\desktop\sistema de gestion - lave\sistema-de-gestion\lave\main.cpp
+1613775432 source:c:\users\javie\desktop\sistema de gestion - lave\sistema-de-gestion\lave\main.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -651,7 +651,7 @@
 	<iostream>
 	"archivo.h"
 
-1613601779 source:c:\users\javie\desktop\sistema de gestion - lave\sistema-de-gestion\lave\modelo\fecha.cpp
+1614555378 source:c:\users\javie\desktop\sistema de gestion - lave\sistema-de-gestion\lave\modelo\fecha.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -841,4 +841,18 @@
 	"vistaUsuario.h"
 	"rlutil.h"
 	"ui.h"
+
+1614552812 source:c:\users\javie\desktop\sistema de gestion - lave\sistema-de-gestion\lave\modelo\hora.cpp
+	<iostream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<cstdio>
+	<ctime>
+	<string.h>
+	<windows.h>
+	<stdio.h>
+	"hora.h"
+
+1614552812 c:\users\javie\desktop\sistema de gestion - lave\sistema-de-gestion\lave\modelo\hora.h
 
