@@ -66,6 +66,8 @@ void Controlador::ingresoPrincipal()
     if (ingreso==1)
     {
         Controlador::instancia().asignarMenu(principal.getUsuarioIngresado(),rol);
+        //Se iniciaria el fichaje
+        Fichaje::Fichaje(principal.getUsurarioIngresado());
 
     }else principal.loginErroneo(ingreso);
 

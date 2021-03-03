@@ -9,9 +9,8 @@
 #include <stdio.h>
 #include "fecha.h"
 
-/*
-Fecha::Fecha(int i){
 
+Fecha::Fecha(){
     //Obtencion de fecha actual y guardado en un Struct de Fecha.
     time_t t = time( NULL );
     struct tm today = *localtime( &t );
@@ -19,10 +18,4 @@ Fecha::Fecha(int i){
     dia =today.tm_mday;
     anio =(today.tm_year+1900);
 }
-*/
-
-Fecha::Fecha(){
-
-}
-
 

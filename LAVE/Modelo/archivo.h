@@ -2,11 +2,13 @@
 #define ARCHIVO_H_INCLUDED
 #include "usuario.h"
 #include "producto.h"
+#include "fichaje.h"
 
 /* A IMPLEMENTAR MAS ADELANTE.
 enum Objeto{
 usuario=1, //Si recibe numero 1, lo toma como Usuario
-producto=2 //Si recibe numero 2, lo toma como Producto
+fichaje=2 //Si recibe numero 2, lo toma como Fichaje
+producto=3 //Si recibe numero 3, lo toma como Producto
 };
 */
 
@@ -19,6 +21,7 @@ class Archivo{
     static bool guardarUsuario(Usuario &u);
     static bool bajaLogica(Usuario u, int  idInterno);
     static bool modificaRol(Usuario u, int idInterno);
+    static bool guardarFichaje(Fichaje &u);
     static bool guardarProducto(Producto &u);
 };
 

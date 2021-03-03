@@ -7,13 +7,13 @@
 class Fichaje{
     private:
         Fecha fecha; //Esta se podria iniciar ya directamente con la fecha del dia.
-        Hora horaIn //Se asignaria el horario del momento
-        Hora horaSa
-        int dniUs; //SE asginaria el dni de usuario que acaba de iniciar sesion
+        Hora horaIn; //Se asignaria el horario del momento
+        Hora horaSa;
+        char nombre; //SE asginaria el dni de usuario que acaba de iniciar sesion
         int codFich; //ID de cada fichaje
         bool estado;
     public:
-        Fichaje();
+        Fichaje(char *usuario);
 };
 
 #endif // FICHAJE_H_INCLUDED

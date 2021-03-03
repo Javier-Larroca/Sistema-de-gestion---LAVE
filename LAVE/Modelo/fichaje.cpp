@@ -7,17 +7,16 @@
 #include <windows.h>
 #include <stdio.h>
 #include "archivo.h"
-#include "fecha.h"
+#include "usuario.h"
 #include "hora.h"
+#include "fichaje.h"
 using namespace std;
 
-Fichaje::Fichaje(){
-}
 
-Fichaje::Fichaje(){
-    Fichaje::cantidadDeObjetos(&codFich,1);
+Fichaje::Fichaje(char *usuario){
+    //Fichaje::cantidadDeObjetos(&codFich,1);
     //dniUs= Aca se deberia asignar el dni del usuario que inicio sesion
-    horaIn
+    Hora horaIn;
 
     estado=true;
 }
