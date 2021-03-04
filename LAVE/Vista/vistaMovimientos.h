@@ -8,9 +8,11 @@
 class vistaMovimientos
 {
 private:
-    int i;
+    char cajero[50];
 public:
+    vistaMovimientos(char *u);
     void opciones();
+    char *getCajero();
 
 };
 

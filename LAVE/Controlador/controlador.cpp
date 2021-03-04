@@ -41,13 +41,13 @@ nuevo.mostrarOpciones();
 }
 
 //Asigna submenu. En vez de usar la clase submenu, instancia las clases que son del tipo vista.
-void Controlador::asignarModulo(int i)
+void Controlador::asignarModulo(int i, char *u)
 {
     switch(i)
     {
     case 1:
     {
-        vistaMovimientos nueva;
+        vistaMovimientos nueva(u);
         nueva.opciones();
     }
     break;
@@ -159,10 +159,13 @@ void Controlador::creacionBackup(){
 }
 
 void Controlador::restauracionBackup(){
+    //Instancio nueva vista
     vistaSeguridad nuevaVista;
     nuevaVista.encabezado();
+    //Si la opcion ingresada es la de restaurar copia entro al IF
     if (nuevaVista.opcionRestaurarCopia())
     {
+        //Si logre restaurar Backup de Usuario y producto, muestro mensaje de exito
         if(Archivo::restaurarBackUpUsuario() && Archivo::restaurarBackUpProducto())
             nuevaVista.interfazExito(2);
         else
@@ -170,7 +173,31 @@ void Controlador::restauracionBackup(){
     }
 }
 
-void Controlador::cargarVenta(){
-vistaVenta nueva;
-nueva.cargaDeVenta();
+void Controlador::cargarVenta(char *u)
+{
+//Instancia vista nueva de venta
+    vistaVenta nueva(u);
+    Venta n;
+    Producto *lista;
+//Vector dinamico de productos, donde voy a cargar los productos disponibles para pasarselos a la vista y que los muestre
+    int cantidadProductos;
+//Cantidad de objetos correspondientes a producto
+    Archivo::cantidadDeObjetos(&cantidadProductos,2);
+//El metodo estatico me devuelve 1 si pudo cargar en el vector dinamico que creamos todos los productos que estan guardados
+    if (Archivo::listaDeProductos(lista=new Producto[cantidadProductos],cantidadProductos))
+    {
+        nueva.cargaDeVenta(lista,cantidadProductos);
+        if (nueva.getMontoDeVenta()>0)
+        {
+            n=nueva.getVenta();
+            if (Archivo::guardarVenta(n)){
+            nueva.msjExito();
+            }
+            else nueva.msjError();
+        }
+    }
+    else{
+     nueva.msjErrorListaProd();
+    }
+    delete lista;
 }

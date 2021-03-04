@@ -48,3 +48,7 @@ bool Producto::escribirDisco(int p){
 bool Producto::leerDisco(int p){
     return true;
 }
+
+char *Producto::setNombre(const char *n){
+strcpy(nombre,n);
+}

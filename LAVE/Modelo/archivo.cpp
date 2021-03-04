@@ -18,6 +18,8 @@ const char *archivoUsuario="data/usuarios.dat";
 //Definición archivo de Productos
 const char *archivoProducto="data/archivos.dat";
 
+const char *archivoVenta="data/venta.dat";
+
 //Definición de archivo de seguridad de usuarios
 const char *archivoUsuarioBkp="dataBkp/usuarios.BKP";
 
@@ -136,7 +138,7 @@ void Archivo::cantidadDeObjetos(int *i, int tipoDeObjeto)  //Le pasamos el tipo 
             fclose(f);
         }
         break;
-    case 2:
+    case 2: //Le paso producto
         {
          f = fopen(archivoProducto, "rb");
             if (f == NULL)
@@ -147,6 +149,17 @@ void Archivo::cantidadDeObjetos(int *i, int tipoDeObjeto)  //Le pasamos el tipo 
             *i = ftell(f) / sizeof(Producto);
             fclose(f);
 
+        }
+    break;
+    case 3: //Le paso venta
+        {
+        f = fopen(archivoVenta, "rb");
+        if (f == NULL){
+        *i = 1; //No existe el archivo, primera vez que lo abre.
+        }
+        fseek(f, 0, SEEK_END);
+        *i = ftell(f) /sizeof(Venta);
+        fclose(f);
         }
     default:
         break;
@@ -322,4 +335,31 @@ f=fopen(archivoProductoBkp, "rb"); //Abro archivo de backup
         if (restaura){
         return 1;
         } else return 2;
+}
+
+int Archivo::listaDeProductos(Producto *vec, int cantProductos){
+    FILE *p; //Archivo producto
+    int bandera=0; //Variable para aumentar las posiciones del vector
+    p=fopen(archivoProducto,"rb"); //Abrimos archivo de productos en modo  lectura
+    if(p==NULL)return -1; //Si no pudo abrir el archivo, retornamos -1
+    while(fread(&vec[bandera], sizeof (Producto),1,p))
+    {
+        bandera++; //A medida que vamos cargando el vector, vamos sumando la variable bandera que indica el indice
+    }
+    fclose(p);
+    if ((bandera-1)==cantProductos)return 1; //Si coinciden los elementos guardados con la cantidad de productos, retornamos 1
+    else return 2; //Si no coinciden, retornamos 2
+}
+
+bool Archivo::guardarVenta(Venta &u){
+    bool grabo;
+    FILE *f;
+    f = fopen(archivoVenta, "ab"); //Le paso el const char que almacena la direccion donde lo guardamos.
+    if (f == NULL){
+        return false;
+    }
+    grabo = fwrite(&u, sizeof(Venta), 1, f);
+    fclose(f);
+    return grabo;
+
 }

@@ -11,6 +11,9 @@
 
 using namespace std;
 
+vistaMovimientos::vistaMovimientos(char *u){
+strcpy(cajero,u);
+}
 //Render de la clase
 void vistaMovimientos::opciones()
 {
@@ -24,22 +27,23 @@ void vistaMovimientos::opciones()
     system("color 0b");
     cout<<" MOVIMIENTOS - GESTION FINANCIERA\n";
     cout<<"\n1. Venta";
-    cout<<"\n2. Caja fuerte";
-    cout<<"\n3. Volver a menu anterior";
+    cout<<"\n2. Volver a menu anterior";
     cout<<endl<<"Ingrese opcion: ";
     cin>>opcAux;
     Validador::validaNumero(opcAux,&opcion); //Le pasamos el char auxiliar para ingresar opciones y la direccion del int opcion para que le asigne el valor.
         switch(opcion)
         {
-        case 1:Controlador::instancia().cargarVenta();
+        case 1:Controlador::instancia().cargarVenta(cajero);
             break;
-        case 2:
-            break;
-        case 3:salirDelSubMenu=true;
+        case 2:salirDelSubMenu=true;
                 system("cls");
             break;
         default:
             break;
         }
     }
+}
+
+char *vistaMovimientos::getCajero(){
+return cajero;
 }

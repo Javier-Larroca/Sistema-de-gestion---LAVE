@@ -14,6 +14,7 @@ class Producto{
         void setPrecio(float);
         float getPrecio();
         int getId();
+        char *setNombre(const char *n);
         const char *getNombre();
         const char *getDescripcion();
         bool escribirDisco(int p);
