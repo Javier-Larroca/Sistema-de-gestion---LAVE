@@ -38,8 +38,12 @@
 		<Unit filename="Modelo/archivo.h" />
 		<Unit filename="Modelo/fecha.cpp" />
 		<Unit filename="Modelo/fecha.h" />
+		<Unit filename="Modelo/fichaje.cpp" />
+		<Unit filename="Modelo/fichaje.h" />
 		<Unit filename="Modelo/funciones.cpp" />
 		<Unit filename="Modelo/funciones.h" />
+		<Unit filename="Modelo/hora.cpp" />
+		<Unit filename="Modelo/hora.h" />
 		<Unit filename="Modelo/producto.cpp" />
 		<Unit filename="Modelo/producto.h" />
 		<Unit filename="Modelo/usuario.cpp" />
@@ -71,10 +75,6 @@
 		<Unit filename="Vista/vistaUsuario.cpp" />
 		<Unit filename="Vista/vistaUsuario.h" />
 		<Unit filename="main.cpp" />
-		<Extensions>
-			<code_completion />
-			<envvars />
-			<debugger />
-		</Extensions>
+		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

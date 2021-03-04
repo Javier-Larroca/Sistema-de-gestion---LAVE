@@ -97,6 +97,6 @@ estado=cambio;
 }
 
 void Usuario::setRol(int r){
-rol=r;
+    rol=r;
 }
 

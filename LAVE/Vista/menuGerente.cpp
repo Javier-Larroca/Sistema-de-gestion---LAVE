@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include "menuGerente.h"
 
+
 using namespace std;
 
 MenuGerente::MenuGerente(char *u)
@@ -54,6 +55,9 @@ void MenuGerente::mostrarOpciones()
     Sleep(800);
     cout<<".";
     salirDelMenu=true;
+
+    //Se debe cerrar sesion.
+
     system("cls");
     }else Controlador::instancia().asignarModulo(opcion); //Llamamos al controlador y asignamos SubMenu.
     }

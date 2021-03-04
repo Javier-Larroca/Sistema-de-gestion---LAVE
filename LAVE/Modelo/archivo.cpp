@@ -10,6 +10,7 @@
 #include <iostream>
 #include "archivo.h"
 
+
 using namespace std;
 
 //Definición archivo de usuarios
@@ -17,6 +18,9 @@ const char *archivoUsuario="data/usuarios.dat";
 
 //Definición archivo de Productos
 const char *archivoProducto="data/archivos.dat";
+
+//Definición archivo de Fichaje
+const char *archivoFichaje="data/fichajes.dat";
 
 //Definición de usuario administrador
 const char *administrador="admin";
@@ -97,8 +101,7 @@ return resultado;
 }
 
 //Si es la primera vez que se ingresa al sistema, creamos el archivo usuario con un solo usuario, el administrador.
-void Archivo::creacionDeArchivoUsuario()
-{
+void Archivo::creacionDeArchivoUsuario(){
     FILE *p= fopen(archivoUsuario,"rb"); //Abre en modo lectura el archivo.
     if (p == NULL)  //Si no lo puede abrir, es la primera vez que se ingresa al archivo, entonces creamos por default el usuario admin.
     {
@@ -128,12 +131,37 @@ void Archivo::cantidadDeObjetos(int *i, int tipoDeObjeto)  //Le pasamos el tipo 
             *i = ftell(f) / sizeof(Usuario);
             fclose(f);
         }
-        break;
+    break;
+    case 2: //En caso de fichaje
+        {
+            f = fopen(archivoFichaje, "rb");
+            if (f == NULL)
+            {
+                cout<<"\nError al acceder al archivo\n";
+            }
+            fseek(f, 0, SEEK_END);
+            *i = ftell(f) / sizeof(Fichaje);
+            fclose(f);
+        }
+    break;
+    case 3: //En caso de fichaje
+        {
+            f = fopen(archivoProducto, "rb");
+            if (f == NULL)
+            {
+                cout<<"\nError al acceder al archivo\n";
+            }
+            fseek(f, 0, SEEK_END);
+            *i = ftell(f) / sizeof(Producto);
+            fclose(f);
+        }
+    break;
     default:
-        break;
-    }
-
+    break;
+ }
 }
+
+
 
 bool Archivo::guardarUsuario(Usuario &u){
     bool grabo;
@@ -163,17 +191,36 @@ return grabo;
 }
 
 bool Archivo::modificaRol(Usuario u, int idInterno){
-bool grabo;
-FILE *f;
-f = fopen(archivoUsuario, "rb+");
-if (f == NULL){
-return false;
+    bool grabo;
+    FILE *f;
+    f = fopen(archivoUsuario, "rb+");
+    if (f == NULL){
+    return false;
+    }
+    fseek (f,idInterno*sizeof(Usuario), SEEK_SET);
+    grabo = fwrite(&u, sizeof(Usuario),1,f);
+    fclose(f);
+    return grabo;
 }
-fseek (f,idInterno*sizeof(Usuario), SEEK_SET);
-grabo = fwrite(&u, sizeof(Usuario),1,f);
-fclose(f);
-return grabo;
+
+bool Archivo::modifHoraSa(){
+    Fichaje fichaAux;
+    bool grabo;
+    FILE *f;
+    f = fopen(archivoFichaje, "rb+");
+    if (f == NULL){
+    return false;
+    }
+    int cant;
+    Archivo::cantidadDeObjetos(&cant,2);
+    fseek (f,cant*sizeof(Fichaje), SEEK_SET);
+    fread(&fichaAux, sizeof(Fichaje),1,f);
+    fichaAux.setHoraSa();
+    grabo = fwrite(&fichaAux, sizeof(Usuario),1,f);
+    fclose(f);
+    return grabo;
 }
+
 
 bool Archivo::guardarProducto(Producto &u){
     bool grabo;
@@ -187,3 +234,14 @@ bool Archivo::guardarProducto(Producto &u){
     return grabo;
 }
 
+bool Archivo::guardarFichaje(Fichaje &u){
+    bool grabo;
+    FILE *f;
+    f = fopen(archivoFichaje, "ab"); //Le paso el const char que almacena la direccion donde lo guardamos.
+    if (f == NULL){
+        return false;
+    }
+    grabo = fwrite(&u, sizeof(Fichaje), 1, f);
+    fclose(f);
+    return grabo;
+}
