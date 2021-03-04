@@ -46,6 +46,8 @@
 		<Unit filename="Modelo/usuario.h" />
 		<Unit filename="Modelo/validador.cpp" />
 		<Unit filename="Modelo/validador.h" />
+		<Unit filename="Modelo/venta.cpp" />
+		<Unit filename="Modelo/venta.h" />
 		<Unit filename="Vista/login.cpp" />
 		<Unit filename="Vista/login.h" />
 		<Unit filename="Vista/menu.h" />
@@ -74,6 +76,8 @@
 		<Unit filename="Vista/vistaSeguridad.h" />
 		<Unit filename="Vista/vistaUsuario.cpp" />
 		<Unit filename="Vista/vistaUsuario.h" />
+		<Unit filename="Vista/vistaVenta.cpp" />
+		<Unit filename="Vista/vistaVenta.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

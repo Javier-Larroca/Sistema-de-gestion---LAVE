@@ -172,5 +172,5 @@ void Controlador::restauracionBackup(){
 
 void Controlador::cargarVenta(){
 vistaVenta nueva;
-
+nueva.cargaDeVenta();
 }

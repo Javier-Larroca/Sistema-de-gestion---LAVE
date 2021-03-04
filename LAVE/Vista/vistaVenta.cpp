@@ -13,17 +13,35 @@
 using namespace std;
 
 void vistaVenta::encabezado(){
-gotoxy(50,2);
-cout<<"Carga de venta";
+gotoxy(40,2);
+cout<<"CARGA DE VENTA";
+gotoxy(85,2);
+cout<<"Cajero: ";
+gotoxy (85,7);
+cout<<"Productos vendidos: ";
+for (int i=1;i<31;i++){
+gotoxy(83,i);
+cout<<"|";
+}
+
 }
 
 void vistaVenta::montoAcumulado(){
-gotoxy(60,50);
+gotoxy(85,5);
 cout<<"Monto acumulado: $";
 }
 
 void vistaVenta::cargaDeVenta(){
+system("cls");
 encabezado();
 montoAcumulado();
-cout<<"\nProductos: ";
+gotoxy(1,4);
+cout<<"Utilice flechas (Arriba/Abajo) para ver los diferentes productos configurados";
+gotoxy(1,5);
+cout<<"Seleccione ENTER para registrar producto en la venta a generar\n";
+gotoxy(1,6);
+cout<<"Seleccione ESC para finalizar venta";
+gotoxy(1,7);
+cout<<"Productos: ";
+system("pause");
 }
