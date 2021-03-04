@@ -37,6 +37,7 @@ void MenuCajero::mostrarOpciones()
     system("pause");
     system("cls");
     }else if (opcion==3){ // Si es 4, sale del sistema
+    Archivo::modifHoraSa();
     system("cls");          //Muestra cierre de sesion
     gotoxy(30,5);
     cout<<"Cerrando sesion";

@@ -35,6 +35,8 @@ class Controlador {
     void creacionBackup(); //Creación de backup. Llama a metodos estaticos de Archivos esperando respuesta.
     void restauracionBackup(); //Restauración de backup. Llama a metodos estaticos de Archivos esperando respuesta
     void cargarVenta(char *u); //Instancio vista nueva de venta y le paso el cajero logueado para que pueda vender.
+    void reporteFichaje();
+
 };
 
 

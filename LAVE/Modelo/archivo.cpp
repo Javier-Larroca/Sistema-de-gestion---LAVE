@@ -18,7 +18,12 @@ const char *archivoUsuario="data/usuarios.dat";
 //Definición archivo de Productos
 const char *archivoProducto="data/archivos.dat";
 
+//Definición archivo de Ventas
 const char *archivoVenta="data/venta.dat";
+
+//Definición archivo de Fichajes
+
+const char *archivoFichaje="data/fichaje.dat";
 
 //Definición de archivo de seguridad de usuarios
 const char *archivoUsuarioBkp="dataBkp/usuarios.BKP";
@@ -131,7 +136,7 @@ void Archivo::cantidadDeObjetos(int *i, int tipoDeObjeto)  //Le pasamos el tipo 
             f = fopen(archivoUsuario, "rb");
             if (f == NULL)
             {
-                cout<<"\nError al acceder al archivo\n";
+               exit(1);
             }
             fseek(f, 0, SEEK_END);
             *i = ftell(f) / sizeof(Usuario);
@@ -143,7 +148,7 @@ void Archivo::cantidadDeObjetos(int *i, int tipoDeObjeto)  //Le pasamos el tipo 
          f = fopen(archivoProducto, "rb");
             if (f == NULL)
             {
-                cout<<"\nError al acceder al archivo\n";
+                exit(2);
             }
             fseek(f, 0, SEEK_END);
             *i = ftell(f) / sizeof(Producto);
@@ -160,6 +165,19 @@ void Archivo::cantidadDeObjetos(int *i, int tipoDeObjeto)  //Le pasamos el tipo 
         fseek(f, 0, SEEK_END);
         *i = ftell(f) /sizeof(Venta);
         fclose(f);
+        }
+    break;
+    case 4:
+        {
+        f = fopen(archivoFichaje, "rb");
+            if (f == NULL)
+            {
+            *i = -1;
+            }
+            fseek(f, 0, SEEK_END);
+            *i = ftell(f) / sizeof(Fichaje);
+            fclose(f);
+
         }
     default:
         break;
@@ -363,3 +381,52 @@ bool Archivo::guardarVenta(Venta &u){
     return grabo;
 
 }
+
+bool Archivo::guardarFichaje(Fichaje &u){
+    bool grabo;
+    FILE *f;
+    f = fopen(archivoFichaje, "ab"); //Le paso el const char que almacena la direccion donde lo guardamos.
+    if (f == NULL){
+        return false;
+    }
+    grabo = fwrite(&u, sizeof(Fichaje), 1, f);
+    fclose(f);
+    return grabo;
+}
+
+bool Archivo::modifHoraSa(){
+    Fichaje fichaAux;
+    bool grabo;
+    FILE *f;
+    f = fopen(archivoFichaje, "rb+");
+    if (f == NULL){
+    return false;
+    }
+    int cant;
+    Archivo::cantidadDeObjetos(&cant,4);
+    fseek (f,cant*sizeof(Fichaje), SEEK_SET);
+    fread(&fichaAux, sizeof(Fichaje),1,f);
+    fichaAux.setHoraSa();
+    grabo = fwrite(&fichaAux, sizeof(Usuario),1,f);
+    fclose(f);
+    return grabo;
+}
+
+/*
+bool Archivo::listarFichajes(){
+    Fichaje fichaAux;
+    FILE *f;
+    f = fopen(archivoFichaje, "rb+");
+    if (f == NULL){
+        return false;
+    }
+    int cant;
+    Archivo::cantidadDeObjetos(&cant,2);
+    fseek (f,cant*sizeof(Fichaje), SEEK_SET);
+    fread(&fichaAux, sizeof(Fichaje),1,f);
+    fichaAux.setHoraSa();
+
+    fclose(f);
+    return grabo;
+}
+**/

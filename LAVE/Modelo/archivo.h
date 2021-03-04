@@ -3,6 +3,7 @@
 #include "usuario.h"
 #include "producto.h"
 #include "venta.h"
+#include "fichaje.h"
 
 /* A IMPLEMENTAR MAS ADELANTE.
 enum Objeto{
@@ -27,6 +28,8 @@ class Archivo{
     static int restaurarBackUpUsuario(); //Restauro archivo de backup de usuario
     static int restaurarBackUpProducto(); //Restauro archivo de backup de producto
     static int listaDeProductos(Producto *vec, int cantProductos); //Cargo en un vector dinamico la lista de productos existentes
+    static bool modifHoraSa();
+    static bool guardarFichaje(Fichaje &u);
 };
 
 #endif // ARCHIVO_H_INCLUDED

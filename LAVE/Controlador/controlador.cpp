@@ -52,7 +52,7 @@ void Controlador::asignarModulo(int i, char *u)
     }
     break;
     case 2:{
-
+    system("cls");
     }
     break;
     case 3: //Vista administracion
@@ -75,6 +75,9 @@ void Controlador::ingresoPrincipal()
     ingreso=Archivo::buscarUsuario(principal.getUsuarioIngresado(), principal.getContraseniaIngresada(),&rol);
     if (ingreso==1)
     {
+        //Se iniciaria el fichaje
+        Fichaje ficha(principal.getUsuarioIngresado());
+        Archivo::guardarFichaje(ficha);
         Controlador::instancia().asignarMenu(principal.getUsuarioIngresado(),rol);
 
     }else principal.loginErroneo(ingreso);
@@ -200,4 +203,9 @@ void Controlador::cargarVenta(char *u)
      nueva.msjErrorListaProd();
     }
     delete lista;
+}
+
+
+void Controlador::reporteFichaje(){
+
 }
