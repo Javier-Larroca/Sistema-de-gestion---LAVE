@@ -17,3 +17,10 @@ Hora::Hora(){
     minutos =today.tm_sec;
 }
 
+void Hora::setHora(){
+    time_t t = time( NULL );
+    struct tm today = *localtime( &t );
+    horas =today.tm_hour;
+    minutos =today.tm_sec;
+}
+

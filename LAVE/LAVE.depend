@@ -531,7 +531,7 @@
 1607207871 c:\users\evasquez\desktop\git\lave-gestion\sistema-de-gestion\lave\vista\vistaproducto.h
 	"../Modelo/producto.h"
 
-1614820962 source:c:\users\javie\desktop\sistema de gestion - lave\sistema-de-gestion\lave\controlador\controlador.cpp
+1614825036 source:c:\users\javie\desktop\sistema de gestion - lave\sistema-de-gestion\lave\controlador\controlador.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -557,7 +557,7 @@
 	"../Vista/vistaUsuario.h"
 	"../Vista/vistaInicioPrincipal.h"
 
-1614813390 c:\users\javie\desktop\sistema de gestion - lave\sistema-de-gestion\lave\modelo\archivo.h
+1614827872 c:\users\javie\desktop\sistema de gestion - lave\sistema-de-gestion\lave\modelo\archivo.h
 	"usuario.h"
 	"producto.h"
 	"fichaje.h"
@@ -693,7 +693,7 @@
 	"producto.h"
 	"archivo.h"
 
-1613601779 source:c:\users\javie\desktop\sistema de gestion - lave\sistema-de-gestion\lave\modelo\usuario.cpp
+1614826589 source:c:\users\javie\desktop\sistema de gestion - lave\sistema-de-gestion\lave\modelo\usuario.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -759,7 +759,7 @@
 	<stdio.h>
 	"MenuCajero.h"
 
-1613601779 source:c:\users\javie\desktop\sistema de gestion - lave\sistema-de-gestion\lave\vista\menugerente.cpp
+1614827837 source:c:\users\javie\desktop\sistema de gestion - lave\sistema-de-gestion\lave\vista\menugerente.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -843,7 +843,7 @@
 	"rlutil.h"
 	"ui.h"
 
-1614638874 source:c:\users\javie\desktop\sistema de gestion - lave\sistema-de-gestion\lave\modelo\hora.cpp
+1614827071 source:c:\users\javie\desktop\sistema de gestion - lave\sistema-de-gestion\lave\modelo\hora.cpp
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
@@ -855,9 +855,9 @@
 	<stdio.h>
 	"hora.h"
 
-1614555601 c:\users\javie\desktop\sistema de gestion - lave\sistema-de-gestion\lave\modelo\hora.h
+1614826898 c:\users\javie\desktop\sistema de gestion - lave\sistema-de-gestion\lave\modelo\hora.h
 
-1614821467 source:c:\users\javie\desktop\sistema de gestion - lave\sistema-de-gestion\lave\modelo\fichaje.cpp
+1614827460 source:c:\users\javie\desktop\sistema de gestion - lave\sistema-de-gestion\lave\modelo\fichaje.cpp
 	<stdlib.h>
 	<cstdlib>
 	<conio.h>
@@ -871,7 +871,24 @@
 	"hora.h"
 	"fichaje.h"
 
-1614821467 c:\users\javie\desktop\sistema de gestion - lave\sistema-de-gestion\lave\modelo\fichaje.h
+1614827460 c:\users\javie\desktop\sistema de gestion - lave\sistema-de-gestion\lave\modelo\fichaje.h
 	"fecha.h"
 	"hora.h"
+
+1614823038 source:c:\users\javie\desktop\sistema de gestion - lave\sistema-de-gestion\lave\vista\vistafichaje.cpp
+	<iostream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<cstdio>
+	<ctime>
+	<string.h>
+	<windows.h>
+	<stdio.h>
+	"vistaFichaje.h"
+	"rlutil.h"
+	"ui.h"
+
+1614823048 c:\users\javie\desktop\sistema de gestion - lave\sistema-de-gestion\lave\vista\vistafichaje.h
+	"../Modelo/fichaje.h"
 

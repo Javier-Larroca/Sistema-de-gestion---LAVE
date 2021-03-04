@@ -13,8 +13,12 @@ class Fichaje{
         int codFich; //ID de cada fichaje
         bool estado;
     public:
+        Fichaje();
         Fichaje(char *usuario);
+        void setHoraSa();
 };
+
+
 
 #endif // FICHAJE_H_INCLUDED
 

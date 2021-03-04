@@ -8,6 +8,7 @@ class Hora{
         int minutos;
     public:
     Hora();
+    void setHora();
 };
 
 

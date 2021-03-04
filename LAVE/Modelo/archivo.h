@@ -21,6 +21,7 @@ class Archivo{
     static bool guardarUsuario(Usuario &u);
     static bool bajaLogica(Usuario u, int  idInterno);
     static bool modificaRol(Usuario u, int idInterno);
+    static bool modifHoraSa();
     static bool guardarFichaje(Fichaje &u);
     static bool guardarProducto(Producto &u);
 };

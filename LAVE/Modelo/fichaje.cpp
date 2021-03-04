@@ -12,14 +12,25 @@
 #include "fichaje.h"
 using namespace std;
 
+Fichaje::Fichaje(){
+
+}
+
 
 Fichaje::Fichaje(char *usuario){
-    //Fichaje::cantidadDeObjetos(&codFich,1);
-    Archivo::cantidadDeObjetos(&codFich,2);
+    Archivo::cantidadDeObjetos(&codFich+1,2);
     Hora horaIn();
+    Hora horaSa();
     Fecha fecha();
     strcpy(usuarioF, usuario);
     estado=true;
 }
+
+void Fichaje::setHoraSa(){
+    horaSa.setHora();
+}
+
+
+
 
 

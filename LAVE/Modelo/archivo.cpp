@@ -10,6 +10,7 @@
 #include <iostream>
 #include "archivo.h"
 
+
 using namespace std;
 
 //Definición archivo de usuarios
@@ -190,17 +191,36 @@ return grabo;
 }
 
 bool Archivo::modificaRol(Usuario u, int idInterno){
-bool grabo;
-FILE *f;
-f = fopen(archivoUsuario, "rb+");
-if (f == NULL){
-return false;
+    bool grabo;
+    FILE *f;
+    f = fopen(archivoUsuario, "rb+");
+    if (f == NULL){
+    return false;
+    }
+    fseek (f,idInterno*sizeof(Usuario), SEEK_SET);
+    grabo = fwrite(&u, sizeof(Usuario),1,f);
+    fclose(f);
+    return grabo;
 }
-fseek (f,idInterno*sizeof(Usuario), SEEK_SET);
-grabo = fwrite(&u, sizeof(Usuario),1,f);
-fclose(f);
-return grabo;
+
+bool Archivo::modifHoraSa(){
+    Fichaje fichaAux;
+    bool grabo;
+    FILE *f;
+    f = fopen(archivoFichaje, "rb+");
+    if (f == NULL){
+    return false;
+    }
+    int cant;
+    Archivo::cantidadDeObjetos(&cant,2);
+    fseek (f,cant*sizeof(Fichaje), SEEK_SET);
+    fread(&fichaAux, sizeof(Fichaje),1,f);
+    fichaAux.setHoraSa();
+    grabo = fwrite(&fichaAux, sizeof(Usuario),1,f);
+    fclose(f);
+    return grabo;
 }
+
 
 bool Archivo::guardarProducto(Producto &u){
     bool grabo;
