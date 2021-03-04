@@ -8,3 +8,38 @@
 #include <windows.h>
 #include <stdio.h>
 #include "vistaMovimientos.h"
+
+using namespace std;
+
+//Render de la clase
+void vistaMovimientos::opciones()
+{
+    bool salirDelSubMenu=false;
+    char opcAux[20]; //Char auxiliar para validar numero
+    int opcion; //Numero donde asignamos el valor que nos da opcAux al pasarlo a la función validaNumero de Validador.cpp. Lo pasamos por direccion
+    while (!salirDelSubMenu)
+    {
+    system("cls");
+    //Color de cmd original por si en algun menú cambiamos de color
+    system("color 0b");
+    cout<<" MOVIMIENTOS - GESTION FINANCIERA\n";
+    cout<<"\n1. Venta";
+    cout<<"\n2. Caja fuerte";
+    cout<<"\n3. Volver a menu anterior";
+    cout<<endl<<"Ingrese opcion: ";
+    cin>>opcAux;
+    Validador::validaNumero(opcAux,&opcion); //Le pasamos el char auxiliar para ingresar opciones y la direccion del int opcion para que le asigne el valor.
+        switch(opcion)
+        {
+        case 1:Controlador::instancia().cargarVenta();
+            break;
+        case 2:
+            break;
+        case 3:salirDelSubMenu=true;
+                system("cls");
+            break;
+        default:
+            break;
+        }
+    }
+}

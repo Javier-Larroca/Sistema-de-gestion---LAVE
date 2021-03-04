@@ -8,6 +8,8 @@
 #include "../Vista/vistaUsuario.h"
 #include "../Vista/vistaInicioPrincipal.h"
 #include "../Vista/vistaSeguridad.h"
+#include "../Vista/vistaMovimientos.h"
+#include "../Vista/vistaVenta.h"
 
 /**Controlador de la aplicación. Interactua con lo que ve el usuario y con los datos.
 Usa patron de singleton
@@ -32,6 +34,7 @@ class Controlador {
     void nuevoProducto();
     void creacionBackup();
     void restauracionBackup();
+    void cargarVenta();
 };
 
 

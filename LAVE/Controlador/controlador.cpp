@@ -47,7 +47,8 @@ void Controlador::asignarModulo(int i)
     {
     case 1:
     {
-
+        vistaMovimientos nueva;
+        nueva.opciones();
     }
     break;
     case 2:{
@@ -167,4 +168,9 @@ void Controlador::restauracionBackup(){
         else
             nuevaVista.interfazError(2);
     }
+}
+
+void Controlador::cargarVenta(){
+vistaVenta nueva;
+
 }
