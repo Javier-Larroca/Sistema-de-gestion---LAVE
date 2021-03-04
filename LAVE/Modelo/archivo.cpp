@@ -18,6 +18,13 @@ const char *archivoUsuario="data/usuarios.dat";
 //Definición archivo de Productos
 const char *archivoProducto="data/archivos.dat";
 
+//Definición de archivo de seguridad de usuarios
+const char *archivoUsuarioBkp="dataBkp/usuarios.BKP";
+
+//Definición de archivo de seguridad de productos
+
+const char *archivoProductoBkp="dataBkp/producto.BKP";
+
 //Definición de usuario administrador
 const char *administrador="admin";
 
@@ -129,12 +136,25 @@ void Archivo::cantidadDeObjetos(int *i, int tipoDeObjeto)  //Le pasamos el tipo 
             fclose(f);
         }
         break;
+    case 2:
+        {
+         f = fopen(archivoProducto, "rb");
+            if (f == NULL)
+            {
+                cout<<"\nError al acceder al archivo\n";
+            }
+            fseek(f, 0, SEEK_END);
+            *i = ftell(f) / sizeof(Producto);
+            fclose(f);
+
+        }
     default:
         break;
     }
 
 }
 
+//Guardamos Usuario creado. Recibe 1 parametros
 bool Archivo::guardarUsuario(Usuario &u){
     bool grabo;
     FILE *f;
@@ -187,3 +207,119 @@ bool Archivo::guardarProducto(Producto &u){
     return grabo;
 }
 
+int Archivo::crearBackUpUsuario(){
+    Usuario reg; //Usuario donde guardamos los archivos que leemos
+//Entero donde vamos a almacenar la cantidad de cada objeto
+    int cantidadUsuarios;
+//Bandera para poder comparar cantidades
+    int registrosGuardados=0;
+//Buscamos la cantidad de objetos en archivo Usuario
+    Archivo::cantidadDeObjetos(&cantidadUsuarios, 1);
+    FILE *f;
+    f=fopen(archivoUsuario, "rb");
+    if (f == NULL)
+    {
+        return -1; //Retorna -1 si no pude abrir el archivo original
+    }
+    while (fread(&reg, sizeof (Usuario), 1, f))
+    {
+        FILE *bkp; //Archivo de backup
+        bkp = fopen(archivoUsuarioBkp, "ab"); //Le paso el const char que almacena la direccion donde lo guardamos.
+        if (bkp == NULL)
+        {
+        return -2; //Retorna -2 si no pudo crear el archivo de BKP
+        }
+        fwrite(&reg, sizeof(Usuario), 1, bkp);
+        registrosGuardados++;
+        fclose(bkp);
+    }
+    fclose(f);
+    if(registrosGuardados==cantidadUsuarios){
+        return 1; //Si la cantidad de objetos que existían con lo que guardamos, devolvemos 1
+    }else return 2; //Si no coincide, devuelve 2
+}
+
+int Archivo::crearBackUpProducto(){
+    Producto reg; //Usuario donde guardamos los archivos que leemos
+//Entero donde vamos a almacenar la cantidad de cada objeto
+    int cantidadProductos;
+//Bandera para poder comparar cantidades
+    int registrosGuardados=0;
+//Buscamos la cantidad de objetos en archivo Producto
+Archivo::cantidadDeObjetos(&cantidadProductos, 2);
+    FILE *f;
+    f=fopen(archivoProducto, "rb");
+    if (f == NULL)
+    {
+        return -1; //Retorna -1 si no pude abrir el archivo original
+    }
+    while (fread(&reg, sizeof (Producto), 1, f))
+    {
+        FILE *bkp; //Archivo de backup
+        bkp = fopen(archivoProductoBkp, "ab"); //Le paso el const char que almacena la direccion donde lo guardamos.
+        if (bkp == NULL)
+        {
+        return -2; //Retorna -2 si no pudo crear el archivo de BKP
+        }
+        fwrite(&reg, sizeof(Producto), 1, bkp);
+        registrosGuardados++;
+        fclose(bkp);
+    }
+    fclose(f);
+    if(registrosGuardados==cantidadProductos){
+        return 1; //Si la cantidad de objetos que existían con lo que guardamos, devolvemos 1
+    }else return 2; //Si no coincide, devuelve 2
+}
+
+int Archivo::restaurarBackUpUsuario(){
+Usuario reg; //Usuario donde guardamos los usuarios que leemos
+FILE *f; //Archivo backup
+FILE *original; //Archivo original
+bool restaura=false;
+f=fopen(archivoUsuarioBkp, "rb"); //Abro archivo de backup
+    if (f == NULL){
+    return -1; //Retorna 1 si no puede abrir el archivo de backup
+    }
+    original=fopen(archivoUsuario, "wb"); //Seteo a 0 la información en usuarios.dat
+    fclose(original); //Cierro archivo
+        while (fread(&reg, sizeof (Usuario), 1, f)){
+            original = fopen(archivoUsuario, "ab"); //Le paso el const char que almacena la direccion donde lo guardamos.
+            if (original == NULL){
+            return -2; //Retorno -2 si no pudo abrir el archivo original
+            }
+            fwrite(&reg, sizeof(Usuario), 1, original); //Escribo los registros de backup en el archivo original
+            fclose(original); //Cierro archivo
+        }
+        restaura=true;
+    fclose(f);//Cierro archivo de usuarios backup
+        if (restaura){
+        return 1;
+        } else return 2;
+
+}
+
+int Archivo::restaurarBackUpProducto(){
+Producto reg; //Usuario donde guardamos los usuarios que leemos
+FILE *f; //Archivo backup
+FILE *original; //Archivo original
+bool restaura=false;
+f=fopen(archivoProductoBkp, "rb"); //Abro archivo de backup
+    if (f == NULL){
+    return -1; //Retorna 1 si no puede abrir el archivo de backup
+    }
+    original=fopen(archivoProducto, "wb"); //Seteo a 0 la información en usuarios.dat
+    fclose(original); //Cierro archivo
+        while (fread(&reg, sizeof (Producto), 1, f)){
+            original = fopen(archivoProducto, "ab"); //Le paso el const char que almacena la direccion donde lo guardamos.
+            if (original == NULL){
+            return -2; //Retorno -2 si no pudo abrir el archivo original
+            }
+            fwrite(&reg, sizeof(Producto), 1, original); //Escribo los registros de backup en el archivo original
+            fclose(original); //Cierro archivo
+        }
+        restaura=true;
+    fclose(f);//Cierro archivo de usuarios backup
+        if (restaura){
+        return 1;
+        } else return 2;
+}

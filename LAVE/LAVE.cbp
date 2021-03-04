@@ -64,10 +64,14 @@
 		<Unit filename="Vista/vistaAdministracion.h" />
 		<Unit filename="Vista/vistaInicioPrincipal.cpp" />
 		<Unit filename="Vista/vistaInicioPrincipal.h" />
+		<Unit filename="Vista/vistaMovimientos.cpp" />
 		<Unit filename="Vista/vistaMovimientos.h" />
 		<Unit filename="Vista/vistaProducto.cpp" />
 		<Unit filename="Vista/vistaProducto.h" />
+		<Unit filename="Vista/vistaReportes.cpp" />
 		<Unit filename="Vista/vistaReportes.h" />
+		<Unit filename="Vista/vistaSeguridad.cpp" />
+		<Unit filename="Vista/vistaSeguridad.h" />
 		<Unit filename="Vista/vistaUsuario.cpp" />
 		<Unit filename="Vista/vistaUsuario.h" />
 		<Unit filename="main.cpp" />

@@ -20,6 +20,8 @@ void vistaAdministracion::opciones()
     while (!salirDelSubMenu)
     {
     system("cls");
+    //Color de cmd original por si en algun menú cambiamos de color
+    system("color 0b");
     cout<<" ADMINISTRACION \n";
     cout<<"\n1. Alta de usuarios";
     cout<<"\n2. Baja de usuarios";
@@ -47,9 +49,9 @@ void vistaAdministracion::opciones()
             break;
         case 6:
             break;
-        case 7:
+        case 7:Controlador::instancia().creacionBackup();
             break;
-        case 8:
+        case 8:Controlador::instancia().restauracionBackup();
             break;
         case 9:salirDelSubMenu=true;
                 system("cls");

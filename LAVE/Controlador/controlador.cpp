@@ -45,6 +45,15 @@ void Controlador::asignarModulo(int i)
 {
     switch(i)
     {
+    case 1:
+    {
+
+    }
+    break;
+    case 2:{
+
+    }
+    break;
     case 3: //Vista administracion
     {
         vistaAdministracion nueva;
@@ -132,4 +141,30 @@ vistaProducto nuevaVista;
     if(Archivo::guardarProducto(P)==0){
         nuevaVista.msjError(1);
     }else nuevaVista.msjExito(1);
+}
+
+void Controlador::creacionBackup(){
+    vistaSeguridad nuevaVista;
+    nuevaVista.encabezado();
+    if (nuevaVista.opcionRealizarCopia())
+    {
+        if(Archivo::crearBackUpUsuario() && Archivo::crearBackUpProducto())
+        {
+            nuevaVista.interfazExito(1);
+        }
+        else
+            nuevaVista.interfazError(1);
+    }
+}
+
+void Controlador::restauracionBackup(){
+    vistaSeguridad nuevaVista;
+    nuevaVista.encabezado();
+    if (nuevaVista.opcionRestaurarCopia())
+    {
+        if(Archivo::restaurarBackUpUsuario() && Archivo::restaurarBackUpProducto())
+            nuevaVista.interfazExito(2);
+        else
+            nuevaVista.interfazError(2);
+    }
 }

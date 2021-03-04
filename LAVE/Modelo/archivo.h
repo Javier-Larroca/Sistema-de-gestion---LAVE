@@ -20,6 +20,10 @@ class Archivo{
     static bool bajaLogica(Usuario u, int  idInterno);
     static bool modificaRol(Usuario u, int idInterno);
     static bool guardarProducto(Producto &u);
+    static int crearBackUpUsuario(); //Creo archivo de backup de usuario
+    static int crearBackUpProducto(); //Creo archivo de backup de Producto
+    static int restaurarBackUpUsuario(); //Restauro archivo de backup de usuario
+    static int restaurarBackUpProducto(); //Restauro archivo de backup de producto
 };
 
 #endif // ARCHIVO_H_INCLUDED

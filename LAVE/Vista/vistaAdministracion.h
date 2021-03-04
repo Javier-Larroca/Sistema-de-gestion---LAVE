@@ -4,10 +4,11 @@
 #include "../Controlador/controlador.h"
 //Vista para Modulo administracion
 
-class vistaAdministracion{
-    private:
+class vistaAdministracion
+{
+private:
     int i;
-    public:
+public:
     void opciones();
 
 };
