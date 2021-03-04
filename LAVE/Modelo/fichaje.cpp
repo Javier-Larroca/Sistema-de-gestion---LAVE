@@ -15,9 +15,10 @@ using namespace std;
 
 Fichaje::Fichaje(char *usuario){
     //Fichaje::cantidadDeObjetos(&codFich,1);
-    //dniUs= Aca se deberia asignar el dni del usuario que inicio sesion
-    Hora horaIn;
-
+    Archivo::cantidadDeObjetos(&codFich,2);
+    Hora horaIn();
+    Fecha fecha();
+    strcpy(usuarioF, usuario);
     estado=true;
 }
 
